@@ -118,10 +118,11 @@ public class TekstiEditori extends JFrame {
 				//Tallennusikkuna:
 				JFileChooser valintaikkuna = new JFileChooser();
 				valintaikkuna.showSaveDialog(null);
+				String p‰‰te = ".txt"; //Luodaan tiedostop‰‰te
+				String uusiTiedosto = valintaikkuna.getSelectedFile().getAbsolutePath() +p‰‰te; //Lis‰t‰‰n .txt tallennettaessa
 				
-				String uusiTiedosto = valintaikkuna.getSelectedFile().getAbsolutePath();
 				
-				System.out.println("Kirjoitettava tiedosto: " + uusiTiedosto);
+				//System.out.println("Kirjoitettava tiedosto: " + uusiTiedosto);
 				
 				try {
 					PrintWriter writer = new PrintWriter( uusiTiedosto );
@@ -416,7 +417,7 @@ public class TekstiEditori extends JFrame {
 				
 				String uusiTiedosto = valintaikkuna.getSelectedFile().getAbsolutePath();
 				
-				System.out.println("Kirjoitettava tiedosto: " + uusiTiedosto);
+				//System.out.println("Kirjoitettava tiedosto: " + uusiTiedosto);
 				
 				try {
 					PrintWriter writer = new PrintWriter( uusiTiedosto );
