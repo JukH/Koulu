@@ -1,146 +1,97 @@
-
-import java.io.BufferedWriter;
-import java.io.EOFException;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
-
-
 public class Sanakirja2 {
-	
-	
-		
-	
 
-	
-	
 	public static void main(String[] args) throws IOException {
-		
+		//Alustetaan txt-tiedostot
 		File suomeksi = new File("src\\suomeksi.txt");
 		File enkuksi = new File("src\\enkuksi.txt");
-		
-		if (suomeksi.createNewFile()){
+		//Tsekataan löytyykö tiedostot, jos ei niin luodaan.
+		if (suomeksi.createNewFile()) {
 			System.out.println("Luotu tiedosto: suomeksi.txt");
 		} else {
 			System.out.println("Käytetään tiedostoa: suomeksi.txt");
 		}
-		
-		if (enkuksi.createNewFile()){
+
+		if (enkuksi.createNewFile()) {
 			System.out.println("Luotu tiedosto: enkuksi.txt");
 		} else {
 			System.out.println("Käytetään tiedostoa: enkuksi.txt");
 		}
-		
+		//Alustetaan kirjoittajat joilla lisätään sanat txt-tiedostoihin.
 		FileWriter suomiKirjoittaja = new FileWriter(suomeksi, true);
 		FileWriter enkkuKirjoittaja = new FileWriter(enkuksi, true);
-		//BufferedWriter BufSuomi = new BufferedWriter(suomiKirjoittaja);
-		//BufferedWriter BufEnkku = new BufferedWriter(enkkuKirjoittaja);
-		
-		
-		
-		
-		
-		
-		
+
 		Scanner lukija = new Scanner(System.in);
-		
-//		String[] suomi = { "kissa", "koira", "hevonen", "auto", "vene" };
-//		String[] englanti = { "cat", "dog", "horse", "car", "boat" };
+
 		String sana = null;
-		
-		
+		//Luodaan HashMap käännöksille, suomenkielinen sana = avain, englanninkielinen = arvo.
 		HashMap<String, String> käännökset = new HashMap<String, String>();
-		
-		
-//		for(int i = 0; i < suomi.length ; i++) {
-//			käännökset.put(suomi[i], englanti[i]);
-//			//Tsekkaa nämä
-//			suomiKirjoittaja.write(suomi[i]+"\n");
-//			
-//			enkkuKirjoittaja.write(englanti[i]+"\n");
-//			
-//		}
-//		suomiKirjoittaja.close();
-//		enkkuKirjoittaja.close();
-		
-		//Luetaan sanat tekstitiedostoista ja lisätään ne HashMappiin
+
+		// Luetaan sanat tekstitiedostoista ja lisätään ne HashMappiin
 		Scanner suomiLukija = new Scanner(suomeksi);
 		Scanner enkkuLukija = new Scanner(enkuksi);
-		
-		while(suomiLukija.hasNextLine() && (enkkuLukija.hasNextLine())){
+		//Luetaan kunnes rivejä ei enää ole
+		while (suomiLukija.hasNextLine() && (enkkuLukija.hasNextLine())) {
 			String finska = suomiLukija.nextLine();
 			String enkku = enkkuLukija.nextLine();
 			käännökset.put(finska, enkku);
 		}
-		
-		
-		//Sanojen lisäys; alustetaan 
+
+		// Sanojen lisäys; alustetaan uusille sanoille ja käännöksille muuttujat
 		String uusiSana;
 		String uusiKäännös;
-		
+
 		do {
-		//Lisäillään uudet sanat HashMappiin
-		System.out.print("Sana alkukielellä?  (Tyhjä sana lopettaa) ");
-		uusiSana = lukija.nextLine();
-		if(!uusiSana.equalsIgnoreCase("")) {
-		System.out.print("Sana käännettynä?  (Tyhjä sana lopettaa) ");
-		uusiKäännös = lukija.nextLine();
-		//kirjoitetaan uudet sanat txt-tiedostoihin
-		
-		suomiKirjoittaja.write(uusiSana);
-		suomiKirjoittaja.write(System.getProperty( "line.separator" ));
-		enkkuKirjoittaja.write(uusiKäännös);
-		enkkuKirjoittaja.write(System.getProperty( "line.separator" ));
-		
-		
-		käännökset.put(uusiSana, uusiKäännös);
-		} 
-		else if (uusiSana == "")  {
-			break;
-		}
-		} while (!uusiSana.equalsIgnoreCase(""));{
-			//Suljetaan kirjoittajat
-			suomiKirjoittaja.close();
-			enkkuKirjoittaja.close();
-		
-		System.out.println("Sanakirjan sisältö: " + käännökset);
-		}
-	
-		//Kääntämislohko
-		do  {
-			System.out.print("Minkä sanan käännöksen haluat tietää? (Tyhjä sana lopettaa) \n");
-			sana = lukija.nextLine();
-			if(käännökset.containsKey(sana)){
-			System.out.println("Sanan " + "\"" + sana + "\"" +" käännös on " + "\"" + käännökset.get(sana) + "\"" + "\n");
-			} else if (sana.equalsIgnoreCase("")){
+			//Tallennetaan uudet sanat muuttujiin
+			System.out.print("Sana alkukielellä?  (Tyhjä sana lopettaa) ");
+			uusiSana = lukija.nextLine();
+			if (!uusiSana.equalsIgnoreCase("")) {
+				System.out.print("Sana käännettynä?  (Tyhjä sana lopettaa) ");
+				uusiKäännös = lukija.nextLine();
+				
+				// kirjoitetaan uudet sanat txt-tiedostoihin
+				suomiKirjoittaja.write(uusiSana);
+				suomiKirjoittaja.write(System.getProperty("line.separator")); //Lisätään rivinvaihto, ei näkynyt notepadissa pelkällä \n-käskyllä.
+				enkkuKirjoittaja.write(uusiKäännös);
+				enkkuKirjoittaja.write(System.getProperty("line.separator")); // -||-
+				//Lisätään uudet käännökset hashmappiin
+				käännökset.put(uusiSana, uusiKäännös);
+			} else if (uusiSana == "") {
 				break;
 			}
-			else {
-				System.out.println("Sanan " + "\"" + sana + "\"" +" käännös on " + "tuntematon!" + "\n");
+		} while (!uusiSana.equalsIgnoreCase(""));
+		{
+			// Suljetaan kirjoittajat
+			suomiKirjoittaja.close();
+			enkkuKirjoittaja.close();
+
+			System.out.println("Sanakirjan sisältö: " + käännökset);
+		}
+
+		// Kääntämislohko, näytetään haluttu käännös
+		do {
+			System.out.print("Minkä sanan käännöksen haluat tietää? (Tyhjä sana lopettaa) \n");
+			sana = lukija.nextLine();
+			if (käännökset.containsKey(sana)) {
+				System.out.println(
+						"Sanan " + "\"" + sana + "\"" + " käännös on " + "\"" + käännökset.get(sana) + "\"" + "\n");
+			} else if (sana.equalsIgnoreCase("")) {
+				break;
+			} else {
+				System.out.println("Sanan " + "\"" + sana + "\"" + " käännös on " + "tuntematon!" + "\n");
 			}
 		} while (sana != "");
 		
-		//Kirjoitetaan HashMapin sisältö tekstitiedostoihin JATKA TÄSTÄ, EI TOIMI!!!!!!
-//		for(int i = 0; i <= käännökset.size(); i++){
-//			String enkkuLisäys = käännökset.get(i);
-//			suomiKirjoittaja.write(käännökset.get(i) + "\n");
-//			enkkuKirjoittaja.write(enkkuLisäys + "\n");
-//		}
-		
-		
-		
-		System.out.println("Ohjelma lopetetaan, kiitos käynnistä!\n"); 
-		
-		}
+		//Suljetaan turhat lukijat ja poistutaan ohjelmasta
+		lukija.close();
+		suomiLukija.close();
+		enkkuLukija.close();
+		System.out.println("Ohjelma lopetetaan, kiitos käynnistä!\n");
+
 	}
-
-
+}
