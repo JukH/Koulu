@@ -1,0 +1,95 @@
+import java.awt.GridLayout; 
+
+import java.awt.event.ActionEvent; 
+
+import java.awt.event.ActionListener; 
+
+ 
+
+import javax.swing.JButton; 
+
+import javax.swing.JFrame; 
+
+import javax.swing.JTextField; 
+
+ 
+
+public class Lämpötilamuunnin { 
+
+ 
+
+public static void main(String[] args) { 
+
+JFrame frame = new JFrame("Celsius Converter"); 
+
+frame.setSize(400, 100); 
+
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+
+frame.setLayout(new GridLayout(2, 2)); 
+
+ 
+
+JTextField syöte = new JTextField(); 
+
+JTextField celsius = new JTextField("Celsius"); 
+
+JTextField fah = new JTextField("Fahrenheit: "); 
+
+JButton muunna = new JButton("Convert"); 
+
+ 
+
+ 
+
+ 
+
+muunna.addActionListener(new ActionListener() { 
+
+     
+
+    public void actionPerformed(ActionEvent e) { 
+
+    String tulos = syöte.getText(); 
+
+    int tulosNumerona = Integer.parseInt(tulos); 
+
+Double uusiTulos = (tulosNumerona * 1.8 + 32); 
+
+ 
+
+    fah.setText("Fahrenheit: " + Double.toString(uusiTulos)); 
+
+     
+
+    } 
+
+}); 
+
+frame.add(celsius); 
+
+frame.add(syöte); 
+
+frame.add(muunna); 
+
+frame.add(fah); 
+
+ 
+
+ 
+
+ 
+
+frame.setVisible(true); 
+
+ 
+
+ 
+
+ 
+
+} 
+
+ 
+
+} 
