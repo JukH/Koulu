@@ -1,0 +1,879 @@
+C# Viopet
+2.1
+using System;
+
+class ohjelman_pääluokan_nimi
+{
+
+public static void Main(string[] args)
+{  
+
+	Console.WriteLine("**********");
+	Console.WriteLine("*        *");
+	Console.WriteLine("*        *");
+	Console.WriteLine("**********");
+
+}
+}
+2.2
+using System;
+
+class taulukot {
+
+	static void Main(string[] args){
+	
+		string[] tavarat = {"MacBook Air","Jolla","Nokia"};
+		string[] hinnat = {"928,90", "349", "99,80"};
+		
+		Console.WriteLine(tavarat[0] + " " + hinnat[0] + "€");
+		Console.WriteLine(tavarat[1] + " " + hinnat[1] + "€");
+		Console.WriteLine(tavarat[2] + " " + hinnat[2] + "€");
+		
+		
+	
+	}
+}
+2.3
+using System;
+
+class vuodenajat {
+	
+	enum vuodenAjat {kevät = 1, kesä = 2, syksy = 3, talvi = 4}
+
+	static void Main(string[] args){
+		
+		Console.WriteLine((int)vuodenAjat.syksy);
+	
+		
+		
+		
+	
+	}
+}
+2.4
+using System;
+
+class tyyppimuunnos {
+
+	static void Main(string[] args){
+	
+		char heksaNumero = '\u5EB3';
+		int numero = (int)heksaNumero;
+		
+		Console.WriteLine(numero);
+			
+		
+		
+	
+	}
+}
+3.1
+using System;
+
+class ohjelman_pääluokan_nimi
+{
+
+public static void Main(string[] args)
+{  
+
+	decimal[] tuoteHinta = new decimal[3];
+	int[] tuoteLkm = new int[3];
+	decimal[] tuoteYhtHinta = new decimal[3];
+	
+	tuoteHinta[0] = 7.96m;
+	tuoteHinta[1] = 72.0m;
+	tuoteHinta[2] = 99.90m;
+	
+	tuoteLkm[0] = 1;
+	tuoteLkm[1] = 1;
+	tuoteLkm[2] = 1;
+	
+	tuoteYhtHinta[0] = tuoteHinta[0] * tuoteLkm[0];
+	tuoteYhtHinta[1] = tuoteHinta[1] * tuoteLkm[1];
+	tuoteYhtHinta[2] = tuoteHinta[2] * tuoteLkm[2];
+	
+	Console.WriteLine("Tuote 1: " + tuoteYhtHinta[0]);
+	Console.WriteLine("Tuote 2: " + tuoteYhtHinta[1]);
+	Console.WriteLine("Tuote 3: " + tuoteYhtHinta[2]);
+	
+
+}
+}
+3.2
+using System;
+
+class ohjelman_pääluokan_nimi
+{
+
+public static void Main(string[] args)
+{  
+	string lukuTeksti;
+	string luku2Teksti;
+	int luku;
+	int luku2;
+	//float luku3;
+	//float luku4;
+	
+	Console.WriteLine("Anna kaksi lukua:");
+	lukuTeksti = Console.ReadLine();
+	luku2Teksti = Console.ReadLine();
+	
+	luku = int.Parse(lukuTeksti);
+	luku2 = int.Parse(luku2Teksti);
+	//luku3 = Convert.ToFloat(luku);
+	//luku4 = Convert.ToFloat(luku2);
+	
+	decimal luku3 = (decimal)luku;
+	decimal luku4 = (decimal)luku2;
+	
+	
+	Console.WriteLine(luku + " + " + luku2 + " = " + (luku + luku2));
+	Console.WriteLine(luku + " - " + luku2 + " = " + (luku - luku2));
+	Console.WriteLine(luku + " * " + luku2 + " = " + (luku * luku2));
+	Console.WriteLine(luku + " / " + luku2 + " = " + (luku3 / luku4));
+	
+}
+}
+3.3
+3.4
+using System;
+
+class ohjelman_pääluokan_nimi
+{
+
+public static void Main(string[] args)
+{  
+	string lukuTeksti;
+	string luku2Teksti;
+	int luku;
+	int luku2;
+	
+	
+	Console.WriteLine("Anna kaksi kokonaislukua:");
+	lukuTeksti = Console.ReadLine();
+	luku2Teksti = Console.ReadLine();
+	
+	luku = int.Parse(lukuTeksti);
+	luku2 = int.Parse(luku2Teksti);
+	
+	
+	Console.WriteLine("Lukujen jakojäännös on: "+ (luku % luku2));
+	
+	
+}
+}
+3.5
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {	
+		string lukuTeksti;
+		string luku2Teksti;
+		int luku;
+		int luku2;
+		
+        Console.WriteLine("Anna kaksi lukua: ");
+        lukuTeksti = Console.ReadLine();
+		luku2Teksti = Console.ReadLine();
+	
+		luku = int.Parse(lukuTeksti);
+		luku2 = int.Parse(luku2Teksti);
+		
+		if(luku < luku2) {
+		Console.WriteLine(luku + " on pienempi kuin " + luku2);
+		}
+		else if(luku > luku2) {
+		Console.WriteLine(luku + " on suurempi kuin " + luku2);
+		}
+		else
+		Console.WriteLine(luku + " on yhtä suuri kuin " + luku2);	
+		
+    }
+}
+3.6
+using System;
+
+class ohjelman_pääluokan_nimi
+{
+
+public static void Main(string[] args)
+{  
+	string lukuTeksti;
+	int luku;
+	
+	
+	
+	Console.WriteLine("Anna kokonaisluku:");
+	lukuTeksti = Console.ReadLine();
+	
+	luku = int.Parse(lukuTeksti);
+	
+	
+	
+	Console.WriteLine(luku <= 0 ? "Ei" : "Jaa");
+	
+
+	
+	
+}
+}
+3.7
+using System;
+
+class ohjelman_pääluokan_nimi
+{
+
+public static void Main(string[] args)
+{  
+
+	string teksti;
+	
+	
+	Console.WriteLine("Anna arvosana:");
+	teksti = Console.ReadLine();
+	
+	decimal arvosana = decimal.Parse(teksti);
+	
+	Console.WriteLine(arvosana + " " + (arvosana < 4 ? "Opiskelija jää luokalle" : "Opiskelija pääsee luokalta!"));
+
+}
+}
+3.8?
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Anna binääriluvut 11001101 sekä 01010111:");
+        long luku1 = Convert.ToInt64(Console.ReadLine(), 2);
+        long luku2 = Convert.ToInt64(Console.ReadLine(), 2);
+        Console.WriteLine(luku1^luku2);
+    }
+}
+4.1
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {
+        int kierros = 0;
+    alku:
+        kierros++;
+        int arvonta = 45;
+        Console.WriteLine("Anna luku:");
+        var luku = Convert.ToDouble(Console.ReadLine());
+
+        if (luku == arvonta)
+        {
+            Console.WriteLine("Onneksi olkoon, sama luku!");
+        }
+        else if (kierros == 5)
+        {
+            Console.WriteLine("Kierroksia 5, lopetetaan ohjelma.");
+        }
+        else
+        {
+            goto alku;
+        }
+    }
+}
+4.2
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {
+		
+	int[] taulukko = new int[5];
+	string tekstiLuku;
+
+	Console.WriteLine("Anna viisi kokonaislukua:");
+		
+		for(int i = 0; i <= 4; i++){
+		tekstiLuku = Console.ReadLine();
+		int luku = int.Parse(tekstiLuku);
+		taulukko[i] = luku;
+		}
+		
+	int summa = 0;
+		
+	foreach(int x in taulukko)
+	summa += x;
+		
+	int keskiarvo = summa / 5;
+		
+		Console.WriteLine("keskiarvo: " + keskiarvo);
+	
+		
+	
+		
+	
+    }
+}
+4.3
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {
+		
+		int summa = 1;
+		
+		Console.WriteLine(summa);
+		
+		
+		for(int i = 0; i <= 19; i++){
+		
+		Console.WriteLine(summa);
+			summa = summa + summa;
+		
+		}
+		
+	
+    }
+}
+4.4
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {
+		int luku = 0;
+		int luku2 = 1;
+		
+		for(int i = 0; i <= 19; i++){
+		Console.WriteLine(luku2);
+		int summa = luku + luku2;
+		luku = luku2;
+		luku2 = summa;
+		
+		}
+		
+	
+    }
+}
+4.5
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {
+		
+		int summa = 0;
+		string tekstiLuku;
+		
+		
+		
+		
+		do{
+		Console.WriteLine("Anna luku: ");
+		tekstiLuku = Console.ReadLine();
+		int luku = int.Parse(tekstiLuku);
+		summa = summa + luku;
+		Console.WriteLine(summa);
+		} while (summa < 100);
+		
+		Console.WriteLine("Raja saavutettu.");
+		
+		
+		
+	
+    }
+}
+4.6
+using System;
+
+class Ohjelma
+{
+    
+    static void Main(string[] args)
+    {
+		
+		string tekstiLuku;
+		int i, flag, j;
+		
+		Console.WriteLine("Anna yläraja:");
+		tekstiLuku = Console.ReadLine();
+		int raja = int.Parse(tekstiLuku);
+		
+		
+		for(i = 2; i <= raja -1; i++) {
+		flag = 1;
+			for(j = 2; j <= i/2; j++){
+				if(i % j == 0) {
+				flag = 0;
+					break;
+				}
+				
+			}
+			if (flag == 1)
+			Console.WriteLine(i);
+		}
+		
+		
+		
+		
+		
+	
+    }
+}
+5.1
+using System;
+
+class Kirja
+{
+    public string Nimi { get; set; }
+    public string Kirjailija { get; set; }
+    public string Kustantaja { get; set; }
+    public string TeemanNimi { get; set; }
+	public int Id { get; set; }
+    private float hinta;
+    public float Hinta
+    {
+        get
+        {
+            return hinta;
+        }
+        set
+        {
+            if (value > 30)
+            {
+                hinta = value * 0.90f;
+            }
+            else
+            {
+                hinta = value;
+            }
+        }
+    
+
+	}
+	public Kirja(string nimi, string kirjailija, int id, float hinta)
+    {
+        Nimi = nimi;
+        Kirjailija = kirjailija;
+        Hinta = hinta;
+        Id = id;
+		
+    }
+	
+	public void tulosta()
+	{
+	Console.WriteLine(Nimi + ", " + Kirjailija + ", " + Id + ", " + Hinta);
+	}
+	
+	static void Main(string[] args)
+	{
+	    Kirja k = new Kirja("Kirja", "K. Kirjoittaja", 528, 21.50f);
+		k.tulosta();
+    	
+    	}
+   }
+5.2
+using System;
+
+class Kirja
+{
+    public string Nimi { get; set; }
+    public string Kirjailija { get; set; }
+    public string Kustantaja { get; set; }
+    public string TeemanNimi { get; set; }
+	public int Id { get; set; }
+    private float hinta;
+    public float Hinta
+    {
+        get
+        {
+            return hinta;
+        }
+        set
+        {
+            if (value > 30)
+            {
+                hinta = value * 0.90f;
+            }
+            else
+            {
+                hinta = value;
+            }
+        }
+    
+
+	}
+	public Kirja(string nimi, string kirjailija, int id, float hinta)
+    {
+        Nimi = nimi;
+        Kirjailija = kirjailija;
+        Hinta = hinta;
+        Id = id;
+		
+    }
+	
+	public void VertaileKirja(Kirja k)
+	{
+		if(this.Hinta < k.Hinta)
+    Console.WriteLine(this.Nimi + " on halvempi kuin " + k.Nimi);
+			else Console.WriteLine(this.Nimi + " on kalliimpi kuin " + k.Nimi);
+	}
+}
+
+6.1
+
+using System;
+
+class Kirja
+{
+    public string Nimi;
+    public string Kirjailija;
+    public string Kustantaja;
+    public string TeemanNimi;
+	public float Hinta;
+
+	public Kirja(string nimi, string kirjailija, string kustantaja, float hinta, string teemanNimi)
+    {
+        Nimi = nimi;
+        Kirjailija = kirjailija;
+        Kustantaja = kustantaja;
+        Hinta = hinta;
+        TeemanNimi = teemanNimi;
+    }
+	
+	public void HaeKirja(string Nimi) {
+		if (Nimi == this.Nimi) {
+			System.Console.WriteLine(this.Nimi + ", " + this.Kirjailija + ", " + this.Kustantaja + ", " + this.TeemanNimi + ", " + this.Hinta);
+		}
+		else
+		{
+			System.Console.WriteLine("Kirjaa ei löytynyt");
+		}
+	}
+	public static Kirja VaihdaTeema(Kirja kirja, string uusiteema) {
+		kirja.TeemanNimi = uusiteema;
+		return kirja;
+	}
+6.2
+using System;
+
+class Kirja
+{
+
+    private float hinta;
+    public float Hinta
+    {
+        get
+        {
+            return hinta;
+        }
+        set
+        {
+            hinta = value > 30 ? (value * 0.90f) : value;
+        }  
+    }
+
+    public Kirja(string nimi, string kirjailija, string kustantaja, float hinta, string teema)
+    {
+        this.Hinta = hinta;
+    }
+
+    static void Main(string[] args)
+    {
+        Kirja k = new Kirja("Kirja", "K. Kirjoittaja", "Kustannus Oy", 21.50f, "Dekkari");
+        Kirja k2 = new Kirja("Toinen Kirja", "O. Kirjailija", "Kustantaja Ab", 36.90f, "Fantasia");
+        Console.WriteLine(k.hinta);
+        Console.WriteLine(k2.Hinta);
+    }
+}
+7.1
+using System;
+
+class KulkuValine
+{
+    protected string tyyppi;
+    protected string merkki;
+    protected int vuosiMalli;
+    protected float hinta;
+
+    public KulkuValine()
+    {
+
+    }
+
+    public KulkuValine(string tyyppi, string merkki, int vuosiMalli, float hinta)
+    {
+        this.tyyppi = tyyppi;
+        this.merkki = merkki;
+        this.vuosiMalli = vuosiMalli;
+        this.hinta = hinta;
+    }
+
+    public virtual void TulostaTiedot()
+    {
+        Console.WriteLine(tyyppi + ", " + merkki + ", " + vuosiMalli + ", " + hinta);
+    }
+
+}
+
+class Auto : KulkuValine
+{
+    protected int koneenKoko;
+    protected string malli;
+    protected int ovienLkm;
+
+    public Auto(string tyyppi, string merkki, int vuosiMalli, float hinta, int koneenKoko, string malli, int ovienLkm)
+    {
+        this.tyyppi = tyyppi;
+        this.merkki = merkki;
+        this.vuosiMalli = vuosiMalli;
+        this.hinta = hinta;
+        this.koneenKoko = koneenKoko;
+        this.malli = malli;
+        this.ovienLkm = ovienLkm;
+    }
+
+    public override void TulostaTiedot()
+    {
+        Console.WriteLine(tyyppi + ", " + merkki + ", " + vuosiMalli + ", " + hinta+", "+koneenKoko+", "+malli+", "+ovienLkm);
+    }
+}
+
+class Ohjelma
+{
+    static void Main(string[] args)
+    {
+        KulkuValine kv = new KulkuValine("auto", "Honda", 2014, 18190f);
+        kv.TulostaTiedot();
+
+        Auto a = new Auto("maasto", "Honda", 2014, 18190f, 143, "Civic", 4);
+        a.TulostaTiedot();
+    }
+}
+7.2
+using System;
+
+class KulkuValine
+{
+    protected string tyyppi;
+    protected string merkki;
+    protected int vuosiMalli;
+    protected float hinta;
+
+    public KulkuValine()
+    {
+
+    }
+
+    public KulkuValine(string tyyppi, string merkki, int vuosiMalli, float hinta)
+    {
+        this.tyyppi = tyyppi;
+        this.merkki = merkki;
+        this.vuosiMalli = vuosiMalli;
+        this.hinta = hinta;
+    }
+
+    public virtual void TulostaTiedot()
+    {
+        Console.WriteLine(tyyppi + ", " + merkki + ", " + vuosiMalli + ", " + hinta);
+    }
+
+}
+
+class Auto : KulkuValine
+{
+    protected int koneenKoko;
+    protected string malli;
+    protected int ovienLkm;
+
+    public Auto(string tyyppi, string merkki, int vuosiMalli, float hinta, int koneenKoko, string malli, int ovienLkm)
+    {
+        this.tyyppi = tyyppi;
+        this.merkki = merkki;
+        this.vuosiMalli = vuosiMalli;
+        this.hinta = hinta;
+        this.koneenKoko = koneenKoko;
+        this.malli = malli;
+        this.ovienLkm = ovienLkm;
+    }
+
+    public override void TulostaTiedot()
+    {
+        Console.WriteLine(tyyppi + ", " + merkki + ", " + vuosiMalli + ", " + hinta+", "+koneenKoko+", "+malli+", "+ovienLkm);
+    }
+
+    public override string ToString()
+    {
+        return tyyppi + ", " + merkki + ", " + vuosiMalli + ", " + hinta + ", " + koneenKoko + ", " + malli + ", " + ovienLkm;
+    }
+
+    public override bool Equals(object o)
+    {
+        return base.Equals(o);
+    }
+	public override int GetHashCode()
+    {
+        return this.GetHashCode();
+    }
+}
+
+class Ohjelma
+{
+    static void Main(string[] args)
+    {
+        Auto a = new Auto("maasto", "Honda", 2014, 18190f, 143, "Civic", 4);
+        Auto a2 = new Auto("farmari", "Skoda", 2014, 22990f, 151, "Octavia", 4);
+        Console.WriteLine(a.ToString() + "\n" + a2.ToString());
+        Console.WriteLine(a.Equals(a2));
+    }
+}
+9.1
+using System;
+using System.Collections.Generic;
+
+class Jumppa
+{
+	public override string ToString()
+    {
+        string jumppa = nimi+"\najat:\n";
+        for (int i = 0; i < ajat.Length; i++)
+        {
+            jumppa += ajat[i] + "\n";
+        }
+
+        jumppa += "\npaikat:\n";
+
+        for (int i = 0; i < paikat.Length; i++)
+        {
+            jumppa += paikat[i] + "\n";
+        }
+        return jumppa;
+    }
+	
+    public string nimi;
+    public string[] ajat;
+    public string[] paikat;
+
+    public Jumppa(string nimi, string[] ajat, string[] paikat)
+    {
+        this.nimi = nimi;
+        this.ajat = ajat;
+        this.paikat = paikat;
+    }
+}
+
+class Ohjelma
+{
+    static void Main(string[] args)
+    {
+        List<Jumppa> jumpat = new List<Jumppa>();
+        jumpat.Add(new Jumppa("juniori", new string[] { "Keskiviikko 9:30", "Perjantai 9:30" }, new string[] { "Liikuntasali" }));
+        jumpat.Add(new Jumppa("seniori", new string[] { "Maanantai 8:00", "Tiistai 8:30" }, new string[] { "Liikuntasali" }));
+        jumpat.Add(new Jumppa("perhe", new string[] { "Lauantai 12:30", "Sunnuntai 13:00" }, new string[] { "Puisto", "Liikuntasali" }));
+        jumpat.Add(new Jumppa("naisten", new string[] { "Tiistai 8:00", "Perjantai 8:00" }, new string[] { "Puisto" }));
+        jumpat.Add(new Jumppa("miesten", new string[] { "Maanantai 8:00", "Torstai 8:00" }, new string[] { "Liikuntasali", "Puisto" }));
+
+        foreach (var jumppa in jumpat)
+        {
+            Console.WriteLine(jumppa.ToString());
+        }
+    }
+}
+10.1
+using System;
+using System.IO;
+
+class Ohjelma
+{
+    static void Main(string[] args)
+    {
+        string tiedosto = "rekisteri.txt";
+        if (!File.Exists(tiedosto))
+        {
+            File.Create(tiedosto);
+        }
+
+        int[] idt = new int[3];
+        string[] nimet = new string[3];
+        float[] palkat = new float[3];
+
+        Console.WriteLine("Anna kolmen työntekijän tiedot (id, nimi, palkka): ");
+        for (int i = 0; i < 3; i++)
+        {
+            Console.WriteLine("Anna id: ");
+            idt[i] = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Anna nimi: ");
+            nimet[i] = Console.ReadLine();
+
+            Console.WriteLine("Anna palkka: ");
+            palkat[i] = (float)Convert.ToDouble(Console.ReadLine());
+        }
+
+        FileStream fOutStream = File.Open(tiedosto, FileMode.Append, FileAccess.Write);
+        StreamWriter sWriter = new StreamWriter(fOutStream);
+        for (int i = 0; i < nimet.Length; i++)
+        {
+            sWriter.WriteLine(idt[i] + " " + nimet[i] + " " + palkat[i]);
+        }
+
+        sWriter.Flush();
+        sWriter.Close();
+    }
+}
+10.2
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Ohjelma
+{
+    static void Main(string[] args)
+    {
+        string tiedosto = "rekisteri.txt";
+
+        List<int> idt = new List<int>();
+        List<string> nimet = new List<string>();
+        List<float> palkat = new List<float>();
+
+        FileStream fInStream = File.OpenRead(tiedosto);
+
+        StreamReader sReader = new StreamReader(fInStream);
+
+        string rivi = null;
+        while ((rivi = sReader.ReadLine()) != null)
+        {
+            string[] tyontekija = rivi.Split(new char[] { ' ' });
+            idt.Add(Convert.ToInt32(tyontekija[0]));
+            nimet.Add(tyontekija[1]);
+            palkat.Add((float)Convert.ToDouble(tyontekija[2]));
+        }
+
+        sReader.Close();
+
+        Console.WriteLine("Anna työntekijän id:");
+        int id = Convert.ToInt32(Console.ReadLine());
+
+        if (idt.Contains(id))
+        {
+            int index = idt.IndexOf(id);
+            Console.WriteLine("id: " + idt[index] + " nimi: " + nimet[index] + " palkka: " + palkat[index]);
+        }
+        else
+        {
+            Console.WriteLine("Työntekijää ei löydy id-numerolla " + id);
+        }
+    }
+}
