@@ -1,0 +1,1797 @@
+1: # -*- coding: cp1252 -*- 
+
+    print("Moi maailma!") 
+
+    print("Tämä on Python-ohjelma.") 
+
+ 
+
+2.1  
+
+ 
+
+merkkijonosisaltoa = "Muuttujaan muuttuja on tallennettu merkkijonosisältöä." 
+
+print(merkkijonosisaltoa) 
+
+ 
+
+2.2  
+
+ 
+
+luku1 = 1000 
+
+luku2 = 24 
+
+ 
+
+tulos = (luku1 + luku2 + 15)**2 
+
+ 
+
+print("Laskutoimituksen tulos on: ", tulos) 
+
+ 
+
+2.3 
+
+ 
+
+luku = 10.6411 
+
+merkkijono = "Merkkijono" 
+
+ 
+
+luku = int(luku) 
+
+ 
+
+print("Kokonaislukumuunnos ei osaa pyöristää: ", luku) 
+
+print("Merkkijonon kertominen tuottaa toistoa: ", merkkijono*2) 
+
+ 
+
+2.4 
+
+ 
+
+print("Tämä on usean rivin tulostus:") 
+
+print("Teksti on jaettu usealle riville.") 
+
+print("Nimi:" + "\tPetteri") 
+
+print("Ammatti:" + "\tKartturi") 
+
+ 
+
+2.5 
+
+ 
+
+print("Laskin") 
+
+luku = input("Anna ensimmäinen luku: ") 
+
+luku2 = input("Anna toinen luku: ") 
+
+ 
+
+luku = int(luku) 
+
+luku2 = int(luku2) 
+
+ 
+
+tulos = luku + luku2 
+
+ 
+
+ 
+
+print("Tulos on: ",tulos) 
+
+ 
+
+2.6 
+
+ 
+
+merkkijono = "Hattukauppias" 
+
+ 
+
+leikkaus1 = merkkijono[0:4] 
+
+leikkaus2 = merkkijono[-4:] 
+
+leikkaus3 = merkkijono[::-1] 
+
+ 
+
+print("Muuttujan 4 ensimmäistä kirjainta ovat ", leikkaus1) 
+
+print("Muuttujan 4 viimeistä kirjainta ovat ", leikkaus2) 
+
+print("Muuttujan teksti on väärinpäin ", leikkaus3) 
+
+ 
+
+3.1 
+
+ 
+
+luku = input("Anna luku: ") 
+
+ 
+
+luku = int(luku) 
+
+ 
+
+if  (luku % 2 == 0): 
+
+print("Antamasi luku oli parillinen.") 
+
+ 
+
+3.2 
+
+ 
+
+nimi = input("Anna nimi: ") 
+
+ 
+
+if (nimi == "Erkki"): 
+
+salasana = input("Anna salasana: ") 
+
+if (salasana == "Esimerkki"): 
+
+print("Salasana ja nimi oli oikein!") 
+
+else: 
+
+print("Salasana oli väärin.") 
+
+else: 
+
+print("Nimi oli väärin.") 
+
+ 
+
+3.3 
+
+ 
+
+valinta = input("Valitse kohde (1-3): ") 
+
+if (valinta == "1"): 
+
+print("Haukion kala Oy") 
+
+if (valinta == "2"): 
+
+print("Metallipaja VasaraAika") 
+
+if (valinta == "3"): 
+
+print("Balin palapelitehdas") 
+
+ 
+
+3.4 
+
+luku = input("Anna luku: ") 
+
+luku2 = input("Anna toinen luku: ") 
+
+ 
+
+luku = int(luku) 
+
+luku2 = int(luku2) 
+
+ 
+
+if(luku % 2 == 0) and (luku2 % 2 == 0): 
+
+print("Molemmat luvut ovat parillisia.") 
+
+ 
+
+elif(luku % 2 == 0) or (luku2 % 2 == 0): 
+
+print("Toinen luku on parillinen.") 
+
+ 
+
+else: 
+
+print("Molemmat luvut ovat parittomia.") 
+
+ 
+
+3.5 
+
+ 
+
+ 
+
+luku = input("Anna ensimmäinen luku: ") 
+
+luku2 = input("Anna toinen luku: ") 
+
+ 
+
+luku = int(luku) 
+
+luku2 = int(luku2) 
+
+ 
+
+print("(1) +") 
+
+print("(2) -") 
+
+print("(3) *") 
+
+print("(4) /") 
+
+ 
+
+valinta = input("Tee valinta (1-4): ") 
+
+ 
+
+if(valinta == "1"): 
+
+tulos = luku + luku2 
+
+print("Tulos on: ",tulos) 
+
+elif(valinta == "2"): 
+
+tulos = luku - luku2 
+
+print("Tulos on: ",tulos) 
+
+elif(valinta == "3"): 
+
+tulos = luku * luku2 
+
+print("Tulos on: ",tulos) 
+
+elif(valinta == "4"): 
+
+tulos = luku / luku2 
+
+print("Tulos on: ",tulos) 
+
+else: 
+
+print("Valintaa ei tunnistettu.") 
+
+ 
+
+4.1 
+
+ 
+
+kierros = 0 
+
+ 
+
+kierroksia = 5 
+
+ 
+
+while kierros < kierroksia: 
+
+print("Olemme kierroksella ", kierros) 
+
+kierros += 1 
+
+ 
+
+4.2 
+
+ 
+
+jatko = True 
+
+ 
+
+while jatko: 
+
+ 
+
+syote = input("Kirjoita jotain: ") 
+
+ 
+
+if syote == "lopeta": 
+
+jatko = False 
+
+print("Lopetit ohjelman.") 
+
+ 
+
+else: 
+
+print(syote) 
+
+ 
+
+4.3 
+
+ 
+
+kierrokset = input("Kuinka monta kierrosta?: ") 
+
+ 
+
+kierrokset = int(kierrokset) 
+
+ 
+
+kertyma = 0 
+
+ 
+
+for i in range(kierrokset): 
+
+kertyma = kertyma + i 
+
+ 
+
+print("Kertymäksi saatiin: ", kertyma) 
+
+ 
+
+4.4 
+
+ 
+
+ 
+
+luku = input("Anna ensimmäinen luku: ") 
+
+luku2 = input("Anna toinen luku: ") 
+
+ 
+
+luku = int(luku) 
+
+luku2 = int(luku2) 
+
+ 
+
+kierros = True 
+
+ 
+
+while kierros == True: 
+
+ 
+
+print("(1) +") 
+
+print("(2) -") 
+
+print("(3) *") 
+
+print("(4) /") 
+
+print("(5)Vaihda luvut") 
+
+print("(6)Lopeta") 
+
+print("Valitut luvut: ", luku, luku2) 
+
+valinta = input("Tee valinta (1-6): ") 
+
+ 
+
+if(valinta == "1"): 
+
+tulos = luku + luku2 
+
+print("Tulos on: ",tulos) 
+
+elif(valinta == "2"): 
+
+tulos = luku - luku2 
+
+print("Tulos on: ",tulos) 
+
+elif(valinta == "3"): 
+
+tulos = luku * luku2 
+
+print("Tulos on: ",tulos) 
+
+elif(valinta == "4"): 
+
+tulos = luku / luku2 
+
+print("Tulos on: ",tulos) 
+
+elif(valinta == "5"): 
+
+luku = input("Anna uusi ensimmäinen luku: ") 
+
+luku2 = input("Anna uusi toinen luku: ") 
+
+continue 
+
+elif(valinta == "6"): 
+
+break 
+
+ 
+
+else: 
+
+print("Valintaa ei tunnistettu.") 
+
+break 
+
+ 
+
+5.1 
+
+ 
+
+tiedosto = open("faktat.txt","r") 
+
+sisalto = tiedosto.read() 
+
+print("Tiedostosta luettiin teksti: ",sisalto) 
+
+ 
+
+5.2 
+
+ 
+
+teksti = input("Minkäniminen tiedosto luodaan?: ") 
+
+sisalto = input("Mitä kirjoitetaan tiedostoon?: ") 
+
+tiedosto = open(teksti, "w") 
+
+ 
+
+tiedosto.write(sisalto) 
+
+ 
+
+print("Luotiin tiedosto ", teksti, " ja siihen tallennettiin teksti: ", sisalto) 
+
+tiedosto.close() 
+
+ 
+
+5.3 
+
+ 
+
+tiedosto = open("merkkijonoja.txt","r") 
+
+sisalto = tiedosto.readlines() 
+
+ 
+
+for i in sisalto: 
+
+i = i[:-1] 
+
+if(i.isalnum()): 
+
+print(i,"kelpaa salasanaksi.") 
+
+else: 
+
+print(i, "sisältää virheellisiä merkkejä.") 
+
+ 
+
+5.4 (HUOM tää vielä kesken, ei toimi) 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+ 
+
+tiedosto = open("muistio.txt","w") 
+
+teksti = "" 
+
+tiedosto.write(teksti) 
+
+while input is not "4": 
+
+    valinta = input("(1) Lue muistikirjaa \n" 
+
+                    "(2) Lisää merkintä \n" 
+
+                    "(3) Tyhjennä muistikirja \n" 
+
+                    "(4) Lopeta \n\n" 
+
+                    "Mitä haluat tehdä?: ") 
+
+                     
+
+    if valinta == "2": 
+
+        teksti = input("Kirjoita uusi merkintä: ") 
+
+        tiedosto.write(teksti) 
+
+    elif valinta == "1": 
+
+         
+
+        print(teksti) 
+
+        print("\n") 
+
+         
+
+         
+
+             
+
+    elif valinta == "4": 
+
+        print("Lopetetaan.") 
+
+        break 
+
+    elif valinta == "3": 
+
+        print("Muistio tyhjennetty.") 
+
+        tiedosto = open("muistio.txt","w") 
+
+        tiedosto.close() 
+
+    else: 
+
+        print("Tuntematon valinta.") 
+
+        print("\n") 
+
+6.1 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+def main(): 
+
+ 
+
+tulostaja() 
+
+ 
+
+def tulostaja(): 
+
+    print("Tulostusfunktio!") 
+
+ 
+
+if __name__ == "__main__": 
+
+main() 
+
+ 
+
+6.2 
+
+ 
+
+def main(): 
+
+    lukuarvo = int(input("Anna lukuarvo: ")) 
+
+    toinenpotenssi(lukuarvo) 
+
+     
+
+def toinenpotenssi(lukuarvo): 
+
+    potenssi = lukuarvo * lukuarvo 
+
+    print("Toinen potenssi on ", potenssi) 
+
+     
+
+if __name__ == "__main__": 
+
+    main() 
+
+ 
+
+6.3 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+def jononpituus(syöte): 
+
+    if len(syöte) < 5: 
+
+        return 0 
+
+    else: 
+
+        return 1 
+
+ 
+
+def main(): 
+
+     
+
+    while input is not "Lopeta": 
+
+        syöte = input("Anna syöte (Lopeta lopettaa): ") 
+
+        tulos = jononpituus(syöte) 
+
+        if syöte == "Lopeta": 
+
+            break 
+
+        if tulos == True: 
+
+            tulostaja(syöte) 
+
+        else: 
+
+            tulostaja1() 
+
+ 
+
+ 
+
+def tulostaja(syöte): 
+
+    print(syöte) 
+
+     
+
+def tulostaja1(): 
+
+    print("Oletustulostus") 
+
+     
+
+if __name__ == "__main__": 
+
+    main() 
+
+ 
+
+6.4 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+def jononpituus(syöte): 
+
+    pituus = len(syöte) 
+
+    return pituus 
+
+def main(): 
+
+     
+
+    while input is not "Lopeta": 
+
+        syöte = input("Anna syöte (Lopeta lopettaa): ") 
+
+        pituus = jononpituus(syöte) 
+
+        if syöte == "Lopeta": 
+
+            break 
+
+        if pituus > 0: 
+
+            tulostaja(pituus) 
+
+        else: 
+
+            tulostaja1() 
+
+ 
+
+ 
+
+def tulostaja(pituus): 
+
+    print("Antamasi syöte oli", pituus, "merkkiä pitkä." ) 
+
+     
+
+def tulostaja1(): 
+
+    print("Et antanut syötettä") 
+
+     
+
+if __name__ == "__main__": 
+
+    main() 
+
+ 
+
+7.1 
+
+ 
+
+import random 
+
+ 
+
+ 
+
+print("Heitetään kolikkoa viidesti:") 
+
+ 
+
+for i in range(5): 
+
+    heitto = random.randint(0,1) 
+
+    if heitto == 0: 
+
+        print("Klaava!") 
+
+    else: 
+
+        print("Kruuna!") 
+
+ 
+
+7.2 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+ 
+
+import random 
+
+voitot = 0 
+
+tappiot = 0 
+
+tasapelit = 0 
+
+kierrokset = 0 
+
+ 
+
+ 
+
+while input is not "Lopeta": 
+
+     
+
+    valinta = input("Jalka, Ydinase vai Torakka? (Lopeta lopettaa): ") 
+
+    if valinta == "Lopeta": 
+
+        print("Pelasit", kierrokset, "kierrosta, joista voitit", voitot, "ja pelasit tasan", tasapelit, "peliä.") 
+
+        break 
+
+    else: 
+
+        kierrokset += 1 
+
+        print("Sinä valitsit: ", valinta) 
+
+     
+
+    valinta1 = random.randint(1,3) 
+
+    if valinta1 == 1: 
+
+        valinta1 = "Jalka" 
+
+    if valinta1 == 2: 
+
+        valinta1 = "Ydinase" 
+
+    if valinta1 == 3: 
+
+        valinta1 = "Torakka" 
+
+         
+
+    print("Tietokone valitsi: ", valinta1) 
+
+     
+
+     
+
+    if valinta == "Jalka" and valinta1 == "Torakka": 
+
+        print("Voitit!") 
+
+        voitot += 1 
+
+        continue 
+
+    if valinta == "Jalka" and valinta1 == "Jalka": 
+
+        print("Tasapeli!") 
+
+        tasapelit += 1 
+
+        continue 
+
+    if valinta == "Jalka" and valinta1 == "Ydinase": 
+
+        print("Hävisit!") 
+
+        tappiot += 1 
+
+        continue 
+
+         
+
+    if valinta == "Ydinase" and valinta1 == "Jalka": 
+
+        print("Voitit!") 
+
+        voitot += 1 
+
+        continue 
+
+    if valinta == "Ydinase" and valinta1 == "Ydinase": 
+
+        print("Tasapeli!") 
+
+        tasapelit += 1 
+
+    if valinta == "Ydinase" and valinta1 == "Torakka": 
+
+        print("Hävisit!") 
+
+        tappiot += 1 
+
+        continue 
+
+         
+
+    if valinta == "Torakka" and valinta1 == "Ydinase": 
+
+        print("Voitit!") 
+
+        voitot += 1 
+
+        continue 
+
+    if valinta == "Torakka" and valinta1 == "Torakka": 
+
+        print("Tasapeli!") 
+
+        tasapelit += 1 
+
+        continue 
+
+    if valinta == "Torakka" and valinta1 == "Jalka": 
+
+        print("Hävisit!") 
+
+        tappiot += 1 
+
+        continue 
+
+         
+
+7.3 
+
+ 
+
+ 
+
+def tulosta(input): 
+
+print("Saatiin syöte: ",input,"\nSyötteen pituus on", len(input), "merkkiä.") 
+
+ 
+
+7.4 
+
+ 
+
+def testaa(testattava): 
+
+if len(testattava) < 5: 
+
+return False 
+
+elif testattava.isalpha(): 
+
+return False 
+
+elif testattava.isdigit(): 
+
+return False 
+
+else: 
+
+return True 
+
+ 
+
+7.5 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+ 
+
+import math 
+
+ 
+
+luku = input("Anna ensimmäinen luku: ") 
+
+luku2 = input("Anna toinen luku: ") 
+
+     
+
+luku = int(luku) 
+
+luku2 = int(luku2) 
+
+     
+
+kierros = True 
+
+ 
+
+while kierros == True:     
+
+ 
+
+    print("(1) +") 
+
+    print("(2) -") 
+
+    print("(3) *") 
+
+    print("(4) /") 
+
+    print("(5)sin(luku1/luku2)") 
+
+    print("(6)cos(luku1/luku2)") 
+
+    print("(7)Vaihda luvut") 
+
+    print("(8)Lopeta") 
+
+    print("Valitut luvut: ", luku, luku2) 
+
+    valinta = input("Tee valinta (1-8): ") 
+
+     
+
+    if(valinta == "1"): 
+
+        tulos = luku + luku2 
+
+        print("Tulos on: ",tulos) 
+
+    elif(valinta == "2"): 
+
+        tulos = luku - luku2 
+
+        print("Tulos on: ",tulos) 
+
+    elif(valinta == "3"): 
+
+        tulos = luku * luku2 
+
+        print("Tulos on: ",tulos) 
+
+    elif(valinta == "4"): 
+
+        tulos = luku / luku2 
+
+        print("Tulos on: ",tulos) 
+
+    elif(valinta == "5"): 
+
+        tulos = math.sin(luku/luku2) 
+
+        print("Tulos on: ",tulos) 
+
+    elif(valinta == "6"): 
+
+        tulos = math.cos(luku/luku2) 
+
+        print("Tulos on: ",tulos) 
+
+    elif(valinta == "7"): 
+
+        luku = input("Anna uusi ensimmäinen luku: ") 
+
+        luku2 = input("Anna uusi toinen luku: ") 
+
+        luku = int(luku) 
+
+        luku2 = int(luku2) 
+
+        continue 
+
+    elif(valinta == "8"): 
+
+        break 
+
+     
+
+    else: 
+
+        print("Valintaa ei tunnistettu.") 
+
+        break 
+
+             
+
+7.6 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+import time         
+
+time.strftime("%X %x") 
+
+'19:01:34 01/03/09' 
+
+tiedosto = open("muistio.txt","w") 
+
+teksti = "" 
+
+tiedosto.write(teksti) 
+
+while input is not "4": 
+
+    valinta = input("(1) Lue muistikirjaa \n" 
+
+                    "(2) Lisää merkintä \n" 
+
+                    "(3) Tyhjennä muistikirja \n" 
+
+                    "(4) Lopeta \n\n" 
+
+                    "Mitä haluat tehdä?: ") 
+
+                     
+
+    if valinta == "2": 
+
+        teksti = input("Kirjoita uusi merkintä: ") 
+
+        tiedosto.write(teksti) 
+
+         
+
+    elif valinta == "1": 
+
+        if teksti is not "": 
+
+            print(teksti,":::",time.strftime("%X %x")) 
+
+            print("\n") 
+
+        else: 
+
+            continue 
+
+         
+
+         
+
+         
+
+             
+
+    elif valinta == "4": 
+
+        print("Lopetetaan.") 
+
+        break 
+
+    elif valinta == "3": 
+
+        tiedosto = open("muistio.txt","w") 
+
+        teksti = "" 
+
+        print("Muistio tyhjennetty.") 
+
+    else: 
+
+        print("Tuntematon valinta.") 
+
+        print("\n") 
+
+ 
+
+8.1 
+
+ 
+
+luku = input("Anna luku: ") 
+
+ 
+
+try: 
+
+luku = int(luku) 
+
+print("Syöte oli kelvollinen.") 
+
+ 
+
+except Exception: 
+
+print("Virheellinen syöte!") 
+
+ 
+
+8.2 
+
+ 
+
+valinta = input("Anna tiedoston nimi: ") 
+
+ 
+
+try: 
+
+tiedosto = open(valinta, "r") 
+
+sisalto = tiedosto.read() 
+
+sisalto = int(sisalto) 
+
+tulos = sisalto + 313 
+
+print("Saatiin tulos", tulos) 
+
+ 
+
+except IOError: 
+
+print("Virheellinen tiedostonnimi") 
+
+except ValueError: 
+
+print("Tiedoston sisältö virheellinen!") 
+
+ 
+
+8.3 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+ 
+
+import math 
+
+ 
+
+def testaa1(): 
+
+    testi = False 
+
+    while testi == False: 
+
+        luku = input("Anna luku: ") 
+
+        try: 
+
+            luku = int(luku) 
+
+            return luku 
+
+            testi = True 
+
+        except Exception: 
+
+            print("Virheellinen syöte!") 
+
+            testi = False 
+
+         
+
+def testaa2(): 
+
+    testi = False 
+
+    while testi == False: 
+
+        luku2 = input("Anna luku: ") 
+
+        try: 
+
+            luku2 = int(luku2) 
+
+            return luku2 
+
+            testi = True 
+
+        except Exception: 
+
+            print("Virheellinen syöte!") 
+
+            testi = False 
+
+             
+
+def testaa3(): 
+
+    testi = False 
+
+    while testi == False: 
+
+        luku = input("Anna luku: ") 
+
+        try: 
+
+            luku = int(luku) 
+
+            return luku 
+
+            testi = True 
+
+        except Exception: 
+
+            print("Virheellinen syöte!") 
+
+            testi = False 
+
+             
+
+def testaa4(): 
+
+    testi = False 
+
+    while testi == False: 
+
+        luku2 = input("Anna luku: ") 
+
+        try: 
+
+            luku2 = int(luku2) 
+
+            return luku2 
+
+            testi = True 
+
+        except Exception: 
+
+            print("Virheellinen syöte!") 
+
+            testi = False 
+
+             
+
+         
+
+def main():         
+
+             
+
+    luku = testaa1() 
+
+    luku2 = testaa2() 
+
+     
+
+         
+
+    kierros = True 
+
+     
+
+    while kierros == True:     
+
+     
+
+        print("(1) +") 
+
+        print("(2) -") 
+
+        print("(3) *") 
+
+        print("(4) /") 
+
+        print("(5)sin(luku1/luku2)") 
+
+        print("(6)cos(luku1/luku2)") 
+
+        print("(7)Vaihda luvut") 
+
+        print("(8)Lopeta") 
+
+        print("Valitut luvut: ", luku, luku2) 
+
+        valinta = input("Tee valinta (1-8): ") 
+
+         
+
+        if(valinta == "1"): 
+
+            tulos = luku + luku2 
+
+            print("Tulos on: ",tulos) 
+
+        elif(valinta == "2"): 
+
+            tulos = luku - luku2 
+
+            print("Tulos on: ",tulos) 
+
+        elif(valinta == "3"): 
+
+            tulos = luku * luku2 
+
+            print("Tulos on: ",tulos) 
+
+        elif(valinta == "4"): 
+
+            tulos = luku / luku2 
+
+            print("Tulos on: ",tulos) 
+
+        elif(valinta == "5"): 
+
+            tulos = math.sin(luku/luku2) 
+
+            print("Tulos on: ",tulos) 
+
+        elif(valinta == "6"): 
+
+            tulos = math.cos(luku/luku2) 
+
+            print("Tulos on: ",tulos) 
+
+        elif(valinta == "7"): 
+
+            luku = testaa3() 
+
+            luku2 = testaa4() 
+
+            
+
+            continue 
+
+        elif(valinta == "8"): 
+
+            break 
+
+         
+
+        else: 
+
+            print("Valintaa ei tunnistettu.") 
+
+            break 
+
+         
+
+if __name__ == "__main__": 
+
+    main() 
+
+ 
+
+ 
+
+8.4 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+import time         
+
+time.strftime("%X %x") 
+
+'19:01:34 01/03/09' 
+
+ 
+
+try: 
+
+    tiedosto = open("muistio.txt", "r") 
+
+except Exception: 
+
+    print("Oletusmuistioa ei löydy, luodaan tiedosto.") 
+
+tiedosto = open("muistio.txt","a") 
+
+ 
+
+while input is not "4": 
+
+    print("Käytetään muistiota: ", tiedosto.name) 
+
+    valinta = input("(1) Lue muistikirjaa \n" 
+
+                    "(2) Lisää merkintä \n" 
+
+                    "(3) Tyhjennä muistikirja \n" 
+
+                    "(4) Vaihda muistiota \n" 
+
+                    "(5) Lopeta \n\n" 
+
+                    "Mitä haluat tehdä?: ") 
+
+                     
+
+    if valinta == "2": 
+
+        teksti = input("Kirjoita uusi merkintä: ") 
+
+        tiedosto.write(teksti) 
+
+        tiedosto.write(":::") 
+
+        tiedosto.write(time.strftime("%X %x")) 
+
+        tiedosto.close() 
+
+         
+
+    elif valinta == "1": 
+
+        tiedosto = open(tiedosto.name, "r") 
+
+        sisalto = tiedosto.read() 
+
+        print(sisalto) 
+
+    elif valinta == "4": 
+
+        tiedosto = input("Anna tiedoston nimi: ") 
+
+        try: 
+
+            tiedosto = open(tiedosto, "r") 
+
+            continue 
+
+        except Exception: 
+
+            print("Tiedostoa ei löydy, luodaan tiedosto.") 
+
+            tiedosto = open(tiedosto, "w") 
+
+            continue 
+
+             
+
+         
+
+         
+
+             
+
+    elif valinta == "5": 
+
+        print("Lopetetaan.") 
+
+        break 
+
+    elif valinta == "3": 
+
+        tiedosto = open("muistio.txt","w") 
+
+        teksti = "" 
+
+        print("Muistio tyhjennetty.") 
+
+    else: 
+
+        print("Tuntematon valinta.") 
+
+        print("\n") 
+
+ 
+
+9.1 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+lista = ["Sininen","Punainen", "Keltainen", "Vihreä"] 
+
+print("Listan ensimmäinen alkio on: ", lista[0]) 
+
+print("Lista tulostettuna alkio kerrallaan: ") 
+
+for i in lista: 
+
+    print(i) 
+
+ 
+
+9.2 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+ostosLista = [] 
+
+ 
+
+while input is not "3": 
+
+    valinta = input("Haluatko\n(1)Lisätä listaan\n(2)Poistaa listalta vai\n(3)Lopettaa?: ") 
+
+     
+
+    if valinta == "1": 
+
+        lisaa = input("Mitä lisätään?: ") 
+
+        ostosLista.append(lisaa) 
+
+         
+
+    elif valinta == "2": 
+
+        print("Listalla on", ostosLista.__len__(), "alkiota.") 
+
+        poisto = input("Monesko niistä poistetaan?: ") 
+
+        poisto = int(poisto) 
+
+        if len(ostosLista) == 0: 
+
+            print("Virheellinen valinta.") 
+
+            continue 
+
+        elif poisto <= len(ostosLista) or poisto >= len(ostosLista): 
+
+            ostosLista.pop(poisto) 
+
+            continue 
+
+         
+
+         
+
+    elif valinta == "3": 
+
+        print("Listalla oli tuotteet: ") 
+
+        for i in ostosLista: 
+
+            print(i) 
+
+        break 
+
+     
+
+    else: 
+
+        print("Virheellinen valinta.") 
+
+        continue 
+
+ 
+
+9.3 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+tiedosto = open("sanoja.txt", "r") 
+
+sisalto = tiedosto.readlines() 
+
+lista = [] 
+
+print("Sanat laitettuna aakkosjärjestykseen:") 
+
+for line in sisalto: 
+
+    lista.append(line) 
+
+lista.sort() 
+
+ 
+
+for i in lista: 
+
+print(i) 
+
+ 
+
+10.1 
+
+ 
+
+class Kilpailija: 
+
+pisteet = 0 
+
+vari = "" 
+
+ 
+
+Olio = Kilpailija 
+
+Olio.vari = "sininen" 
+
+Olio.pisteet = 10 
+
+ 
+
+print("Kilpailijalla ", Olio.vari, "on", Olio.pisteet, "pistettä!") 
+
+ 
+
+10.2 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+class Kilpailija: 
+
+    pisteet = 0 
+
+    vari = "" 
+
+    def tilanne(self): 
+
+        print("Olen", self.vari, "ja minulla on", self.pisteet,"pistettä!") 
+
+        return self.pisteet 
+
+    def maali(self): 
+
+        self.pisteet += 1 
+
+     
+
+     
+
+eka = Kilpailija() 
+
+eka.vari = "sininen" 
+
+eka.maali() 
+
+eka.tilanne() 
+
+ 
+
+10.3 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+class Kilpailija: 
+
+    pisteet = 0 
+
+    vari = "" 
+
+    def __init__(self, vari): 
+
+        vari = input("Anna minulle väri: ") 
+
+        self.vari = vari 
+
+        
+
+    def tilanne(self): 
+
+        print("Olen", self.vari, "ja minulla on", self.pisteet," pistettä!") 
+
+        return self.pisteet 
+
+    def maali(self): 
+
+        self.pisteet += 1 
+
+    def __doc__(self): 
+
+        print("Kilpailija: sisältää pisteet ja värin") 
+
+     
+
+     
+
+eka = Kilpailija("") 
+
+ 
+
+toka = Kilpailija("") 
+
+ 
+
+eka.tilanne() 
+
+toka.tilanne() 
+
+eka.__doc__() 
+
+ 
+
+10.4 
+
+ 
+
+# -*- coding: cp1252 -*- 
+
+class Emo: 
+
+    arvo = 0 
+
+    tila = "Toiminnassa" 
+
+    def nimi(self): 
+
+        print("Minä olen emoluokka.") 
+
+     
+
+class Lapsi(Emo): 
+
+    def nimi(self): 
+
+        print("Minä olen lapsiluokka.") 
+
+         
+
+emo = Emo() 
+
+print(emo.tila) 
+
+emo.nimi() 
+
+lapsi = Lapsi() 
+
+print(lapsi.tila) 
+
+lapsi.nimi() 
