@@ -1,0 +1,173 @@
+public class OmenaKone { 
+
+ 
+
+public static void main(String[] args) { 
+
+ 
+
+omena ekaOmena = new omena(); 
+
+ekaOmena.setLajike("valkeakuulas"); 
+
+ekaOmena.setVäri("vihreä"); 
+
+ekaOmena.setPaino(100); 
+
+ 
+
+omena tokaOmena = new omena(); 
+
+tokaOmena.setLajike("kaneliomena"); 
+
+tokaOmena.setVäri("punainen"); 
+
+tokaOmena.setPaino(80); 
+
+ 
+
+omena kolmasOmena = new omena(); 
+
+kolmasOmena.setLajike("polka"); 
+
+kolmasOmena.setVäri("punainen"); 
+
+kolmasOmena.setPaino(90); 
+
+ 
+
+omena testiOmena = new omena(); 
+
+ 
+
+System.out.println("Omenakone v. 1.0"); 
+
+System.out.println("Luodaan kolme omenaa."); 
+
+System.out.println(); 
+
+System.out.println("1. omena: " + ekaOmena); 
+
+System.out.println("2. omena: " + tokaOmena); 
+
+System.out.println("3. omena: " + kolmasOmena); 
+
+System.out.println("Testiomena: " + testiOmena); 
+
+System.out.println(); 
+
+ekaOmena.haukkaa(); 
+
+System.out.println("1. omena: " + ekaOmena); 
+
+ekaOmena.haukkaa(); 
+
+System.out.println("1. omena: " + ekaOmena); 
+
+ 
+
+} 
+
+ 
+
+} 
+
+ 
+
+ 
+
+public class omena { 
+
+ 
+
+private String väri; 
+
+private String lajike; 
+
+private int paino; 
+
+ 
+
+public omena(){ 
+
+this.lajike = "Ei arvoa"; 
+
+this.väri = "Väritön"; 
+
+this.paino = 0; 
+
+} 
+
+ 
+
+public void setVäri(String uusiVäri) { 
+
+this.väri = uusiVäri; 
+
+} 
+
+ 
+
+public String getVäri() { 
+
+return this.väri; 
+
+} 
+
+ 
+
+public void setLajike(String uusiLajike) { 
+
+this.lajike = uusiLajike; 
+
+} 
+
+ 
+
+public String getLajike() { 
+
+return this.lajike; 
+
+} 
+
+ 
+
+public void setPaino(int uusiPaino) { 
+
+this.paino = uusiPaino; 
+
+} 
+
+ 
+
+public int getPaino() { 
+
+return this.paino; 
+
+} 
+
+  
+
+ 
+
+public void haukkaa() { 
+
+System.out.println("Rouskis!"); 
+
+this.paino-=10; 
+
+} 
+
+ 
+
+public String toString () { 
+
+String tuloste = "Lajike: " + this.lajike + ", väri: " + this.väri 
+
++ ", paino: " + paino; 
+
+return tuloste; 
+
+} 
+
+} 

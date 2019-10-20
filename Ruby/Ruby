@@ -1,0 +1,893 @@
+1: 
+
+# coding: utf-8 
+
+puts "Moi maailma!" 
+
+puts "Tästä se sitten lähtee!" 
+
+ 
+
+2: 
+
+# coding: utf-8 
+
+merkkijono = "Tekstiä!" 
+
+luku = 100 
+
+tulos = luku * 2 / 10 
+
+puts "Muuttujia voi laittaa tulosteisiin: " + merkkijono 
+
+puts "Niillä voi myös laskea: #{tulos}" 
+
+ 
+
+3: 
+
+# coding: utf-8 
+
+puts "Anna joku luku:" 
+
+luku = gets.to_i 
+
+puts "Antamasi luku on binaariarvoina " + luku.to_s(2) 
+
+puts "ja heksoina " + luku.to_s(16) 
+
+ 
+
+4: 
+
+#coding: UTF-8 
+
+print "Anna jokin desimaaliluku: " 
+
+des = gets.to_f 
+
+des = des * 10 
+
+des = des.round.to_i 
+
+des = des.to_f / 10 
+
+print "Luku on pyöristettynä " + des.to_s 
+
+ 
+
+5: 
+
+#coding: UTF-8 
+
+luku = rand(20) + 1 
+
+puts "Noppa heitti tuloksen " + luku.to_s 
+
+ 
+
+Monivalinnat: 
+
+Väite EI totta, väite EI totta, Ei pidä paikkaansa, ainoastaan avainsanat ratkaisevat, tämä väite pitää paikkansa, ei mitään. 
+
+ 
+
+2-OSIO 
+
+ 
+
+1: 
+
+#coding: UTF-8 
+
+eka = "Balin palapeli" 
+
+toka = "tehdas!\n" 
+
+kolmas = eka + toka 
+
+puts kolmas 
+
+ 
+
+2: 
+
+#coding: UTF-8 
+
+teksti = "Balin palapelitehdas!!" 
+
+teksti.gsub!("li", "ke") 
+
+teksti.chop!.chop! 
+
+print teksti 
+
+ 
+
+3: 
+
+#coding: UTF-8  
+
+puts "Kirjoita jotain: " 
+
+teksti = gets.chomp! 
+
+puts "Ensimmäiset kolme merkkiä: " + teksti[0..2] 
+
+puts "Viimeiset kaksi merkkiä: " + teksti[-2..-1] 
+
+puts "Kolmannesta merkistä eteenpäin: " + teksti[2..-1] 
+
+ 
+
+4: 
+
+#coding: UTF-8 
+
+lista = ["ananas", "banaani", "kaneli", "turtana", "unikko"] 
+
+lista.push("karhea") 
+
+lista.delete("kaneli") 
+
+lista.sort! 
+
+puts lista 
+
+ 
+
+5: 
+
+#coding: UTF-8 
+
+print "Kirjoita jotain: " 
+
+teksti = gets 
+
+lista = [teksti.split(" ").uniq.sort] 
+
+puts "Tässä sanat aakkosjärjestyksessä:" 
+
+puts lista 
+
+ 
+
+Monivalinnat: 
+
+Väite on totta, Tämä väite ei ole totta, Tämä väite pitää paikkansa, testi, 0-99 
+
+ 
+
+3-OSIO 
+
+ 
+
+1: 
+
+#coding: UTF-8 
+
+puts "Anna 1. luku: " 
+
+luku1 = gets.to_f 
+
+puts "Anna 2. luku: " 
+
+luku2 = gets.to_f 
+
+puts "(Y)hteen-, (V)ähennys- vai (K)ertolasku?" 
+
+valinta = gets.chomp 
+
+ 
+
+yhteen = luku1 + luku2 
+
+miinus = luku1 - luku2 
+
+kerto = luku1 * luku2 
+
+ 
+
+if valinta == "Y" 
+
+puts "Tulos on " + yhteen.to_s 
+
+ 
+
+elsif valinta == "V" 
+
+puts "Tulos on " + miinus.to_s 
+
+ 
+
+elsif valinta == "K" 
+
+puts "Tulos on " + kerto.to_s 
+
+ 
+
+else  
+
+puts "Virheellinen valinta." 
+
+end 
+
+ 
+
+2: 
+
+#coding: UTF-8 
+
+print "Valitse x-akselin arvo väliltä 0-9: " 
+
+x = gets.to_i 
+
+print "Valitse y-akselin arvo väliltä 0-9: " 
+
+y = gets.to_i 
+
+ 
+
+if x < 0 or y < 0  
+
+puts "Annoit negatiivisen arvon." 
+
+ 
+
+elsif x < 5 and y >= 5 
+
+puts "Olet vasemmassa yläkulmassa." 
+
+ 
+
+elsif x >= 5 and y < 5 
+
+puts "Olet oikeassa alakulmassa." 
+
+ 
+
+elsif x >= 5 and y >= 5 
+
+puts "Olet oikeassa yläkulmassa." 
+
+ 
+
+elsif x < 5 and y < 5 
+
+puts "Olet vasemmassa alakulmassa." 
+
+ 
+
+end 
+
+ 
+
+3: 
+
+#coding: utf-8 
+
+puts "Anna nimi: " 
+
+nimi = gets.chomp 
+
+ 
+
+if nimi == "Erkki" 
+
+puts "Anna salasana: " 
+
+salasana = gets.chomp 
+
+if salasana == "haukionkala" 
+
+puts "Hei Erkki!" 
+
+else  
+
+puts "Et ole Erkki." 
+
+end 
+
+else  
+
+puts "En tunne sinua." 
+
+ 
+
+ 
+
+end 
+
+ 
+
+4: 
+
+#coding: UTF-8 
+
+ 
+
+puts "Oraakkeli vastaa kyllä/ei-muodossa" 
+
+puts "Kirjoita kysymyksesi Oraakkelille:" 
+
+kysymys = gets 
+
+ 
+
+nro = rand(100) 
+
+ 
+
+tulos = case nro 
+
+  when 0..19 then "Ei missään nimessä!" 
+
+  when 20..44 then "Ei varmaankaan" 
+
+  when 45..54 then "En osaa sanoa." 
+
+  when 55..79 then "Luultavasti kyllä." 
+
+  when 80..99 then "Ehdottomasti kyllä." 
+
+  else "hämmentävä" 
+
+  end 
+
+ 
+
+print "Kysymyksesi oli: #{kysymys}" 
+
+puts "Tähän Oraakkeli vastasi:" 
+
+print tulos 
+
+ 
+
+5: 
+
+#coding: UTF-8 
+
+pelaajanPisteet = 0 
+
+tietokoneenPisteet = 0 
+
+ 
+
+jatka = true 
+
+ 
+
+while jatka 
+
+puts "1: Torakka 2: Jalka 3: Ydinpommi 4: lopeta" 
+
+puts "Valitse (1-4):" 
+
+valinta = gets.to_i 
+
+ 
+
+if valinta == 4 
+
+jatka = false 
+
+else 
+
+ 
+
+kone = rand(3) + 1 
+
+ 
+
+#tietokoneen arvonta 
+
+tietokone = case kone 
+
+when 1 then "tietokone valitsi torakan." 
+
+when 2 then "tietokone valitsi jalan." 
+
+when 3 then "tietokone valitsi ydinpommin." 
+
+end 
+
+ 
+
+#pelaajan valinta 
+
+pelaaja = case valinta 
+
+when 1 then "Valitsit torakan, " 
+
+when 2 then "Valitsit jalan, " 
+
+when 3 then "Valitsit ydinpommin, " 
+
+end 
+
+ 
+
+ 
+
+ 
+
+if kone == 1 and valinta == 2 
+
+puts "#{pelaaja}#{tietokone}" 
+
+puts "Voitit!" 
+
+pelaajanPisteet = pelaajanPisteet + 1 
+
+elsif kone == 2 and valinta == 3 
+
+puts "#{pelaaja}#{tietokone}" 
+
+puts "Voitit!" 
+
+pelaajanPisteet = pelaajanPisteet + 1 
+
+elsif kone == 3 and valinta == 1 
+
+puts "#{pelaaja}#{tietokone}" 
+
+puts "Voitit!" 
+
+pelaajanPisteet = pelaajanPisteet + 1 
+
+elsif kone == valinta 
+
+puts "Valitsitte saman, tasapeli." 
+
+else  
+
+puts "#{pelaaja}#{tietokone}" 
+
+puts "Tietokone voitti." 
+
+tietokoneenPisteet = tietokoneenPisteet + 1 
+
+end 
+
+ 
+
+ 
+
+ 
+
+puts "Peli on pelaaja #{pelaajanPisteet} : tietokone #{tietokoneenPisteet}" 
+
+end 
+
+ 
+
+end 
+
+ 
+
+Monivalinnat: 
+
+2, X on erisuuri kuin Y, Kaksi eri asiaa ovat, Valintaehdossa on looginen virhe, Tämä väite ei pidä paikkaansa. 
+
+ 
+
+4-OSIO 
+
+1: 
+
+#coding: UTF-8 
+
+puts "Anna luku: " 
+
+luku = gets.to_i 
+
+i = 0 
+
+ 
+
+while i < 10 
+
+i = i + 1 
+
+tulos = luku**i 
+
+puts i.to_s + ". potenssi on " + tulos.to_s 
+
+end 
+
+ 
+
+2: 
+
+#coding: UTF-8 
+
+jatko = true 
+
+ 
+
+while jatko 
+
+print "Anna autolla ajetut kilometrit: " 
+
+kilsat = gets.to_i 
+
+print "Anna bensanhinta: " 
+
+hinta = gets.to_f 
+
+print "Onko matka (1) maantieajoa vai (2) kaupunkiajoa?: " 
+
+valinta = gets.to_i 
+
+if valinta == 1 
+
+tulos = (hinta * 5 * kilsat) / 100 
+
+puts "Matka maksoi " + tulos.to_s + " euroa" 
+
+end 
+
+if valinta == 2 
+
+tulos = (hinta * 9 * kilsat) / 100 
+
+puts "Matka maksoi " + tulos.to_s + " euroa" 
+
+end 
+
+print "Lasketaanko toinen matka? (k/e)?: " 
+
+jatkovalinta = gets.chomp 
+
+if jatkovalinta == "e" 
+
+break 
+
+puts "pitäs loppua" 
+
+end 
+
+end 
+
+ 
+
+3: 
+
+#coding: UTF-8 
+
+puts "Anna aloituspaikka:" 
+
+luku = gets.to_i 
+
+ 
+
+löytö = true 
+
+ 
+
+while löytö 
+
+ 
+
+if luku % 3 == 0 && luku % 5 == 0 && luku % 7 == 0  
+
+puts "Sopiva luku löytyi: " + luku.to_s 
+
+break 
+
+else 
+
+puts luku.to_s + " ei kelpaa..." 
+
+ 
+
+end 
+
+luku = luku + 1 
+
+end 
+
+ 
+
+4: 
+
+#coding: UTF-8 
+
+print "Montako kierrosta lasketaan?: " 
+
+kierroksia = gets.to_i 
+
+eka = 0 
+
+toka = 1 
+
+ 
+
+for i in 1..kierroksia 
+
+tulos = eka + toka 
+
+puts "Seuraava Fibonaccin luku on " + tulos.to_s + "." 
+
+eka = toka 
+
+toka = tulos 
+
+end 
+
+ 
+
+5: 
+
+#coding: UTF-8 
+
+require 'pp' 
+
+jatko = true 
+
+lista = [] 
+
+ 
+
+while jatko 
+
+puts "Ostoslistalla on seuraavaa;" 
+
+ 
+
+lista.each do |ostos| 
+
+print ostos + " "  
+
+ 
+
+end 
+
+puts "" 
+
+puts "(1) Lisää tuote (2) Poista listan viimeinen tuote (3) Lopeta:" 
+
+valinta = gets.to_i 
+
+if valinta == 1 
+
+puts "Mitä lisätään?: " 
+
+lisäys = gets.chomp 
+
+lista.push(lisäys) 
+
+elsif valinta == 2 
+
+puts "Poistetaan " + lista[0] 
+
+lista.delete_at(0) 
+
+elsif valinta == 3 
+
+jatko = false 
+
+puts "Koriin jäi " + lista.count.to_s + " tuotetta:" 
+
+lista.each do |ostos| 
+
+puts ostos 
+
+ 
+
+end 
+
+end 
+
+end 
+
+ 
+
+MONIVALINNAT: 
+
+Tämä väite pitää paikkansa, Alkion arvon, eli arvot 5, 10, 15 ja 20., Tämä väite on väärin., 
+
+Tämä väite pitää paikkansa., Vaihtoehto C on väärin. 
+
+ 
+
+5-OSIO 
+
+ 
+
+1: 
+
+#coding: UTF-8 
+
+tiedosto = File.open("5-1_tiedosto.txt","r") 
+
+tiedosto.each {|data| print data } 
+
+tiedosto.close 
+
+ 
+
+2: 
+
+#coding: UTF-8 
+
+jatko = true 
+
+tiedosto = File.open("5-2_tiedosto.txt", "w") 
+
+luku = File.open("5-2_tiedosto.txt", "r") 
+
+while jatko 
+
+puts "Kirjoita jotain (lopeta lopettaa):" 
+
+input = gets.chomp 
+
+if input != "lopeta" 
+
+ 
+
+tiedosto.puts(input) 
+
+ 
+
+ 
+
+elsif input == "lopeta" 
+
+tiedosto.close 
+
+puts "Tiedostoon kirjoitettiin:" 
+
+luku.each {|rivi| print rivi} 
+
+luku.close 
+
+jatko = false 
+
+end 
+
+ 
+
+end 
+
+ 
+
+3: 
+
+#coding: UTF-8 
+
+luku = File.open("5-3_tiedosto.txt","r") 
+
+ 
+
+lista = Array.new 
+
+luku.each_char {|merkki| lista.push(merkki)} 
+
+#luku.close 
+
+lista.pop 
+
+lista.pop 
+
+lista.pop 
+
+lista.pop 
+
+ 
+
+ 
+
+puts lista.size.to_s + " merkkiä: "  + File.read(luku).count('a').to_s + " a:ta, " + File.read(luku).count("f").to_s + " f:ää." 
+
+ 
+
+4: 
+
+#coding: UTF-8 
+
+i = 0 
+
+tiedosto = File.open("5-4_tiedosto.txt", "r") 
+
+tiedosto.each {|rivi| i +=1 
+
+if rivi.include? "hanhi" 
+
+puts "Hanhi rivillä " + i.to_s + "!" 
+
+end 
+
+ 
+
+} 
+
+ 
+
+5: 
+
+#coding: UTF-8 
+
+eka = File.open("5-5a_tiedosto.txt", "r") 
+
+toka = File.open("5-5b_tiedosto.txt", "r") 
+
+kolmas = File.open("5-5c_tiedosto.txt", "r") 
+
+ 
+
+ekat = [] 
+
+tokat = [] 
+
+kolmannet = [] 
+
+ 
+
+eka.each{|rivi| ekat.push(rivi.chomp)} 
+
+eka.close 
+
+toka.each{|rivi| tokat.push(rivi.chomp)} 
+
+toka.close 
+
+kolmas.each{|rivi| kolmannet.push(rivi.chomp)} 
+
+kolmas.close 
+
+ 
+
+arvottu = ekat[rand(ekat.count)] + " " + tokat[rand(tokat.count)] + " " + kolmannet[rand(kolmannet.count)] 
+
+ 
+
+ 
+
+puts "Uuden jutun nimi voisi olla vaikkapa seuraava:\n" + arvottu 
+
+ 
+
+MONIVALINNAT: 
+
+Lukee tiedoston sisällön ja kopioi sen rivi riviltä muuttujaan luettu., Tämä väite on väärin., Tämä väite on väärin., Tämä väite on oikein., Tämä väite ei ole totta. 
+
+ 
+
+6-OSIO 
+
+ 
+
+1: 
+
+#coding: UTF-8 
+
+ 
+
+ 
+
+def tulostaja(sana, kertaa) 
+
+while kertaa > 0 
+
+  puts sana 
+
+kertaa -= 1 
+
+end 
+
+ 
+
+ 
+
+ 
+
+end 
+
+ 
+
+tulostaja("Metodit jyrää.",5) 
+
+tulostaja("Näin on.",2) 

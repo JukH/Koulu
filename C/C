@@ -1,0 +1,1117 @@
+1.1 
+
+#include <stdio.h> 
+
+/* Tämä on hieno ohjelma*/ 
+
+ 
+
+int main(void){ 
+
+  int luku; 
+
+  printf("Anna luku:"); 
+
+  scanf("%d", &luku); 
+
+  printf("Luku oli: %d\n",luku); 
+
+  return 0; 
+
+} 
+
+2.1 
+
+#include <stdio.h> 
+
+/* Tämä on hieno ohjelma*/ 
+
+ 
+
+int main(void){ 
+
+  printf("Terve vaan kaikille!\n"); 
+
+  return 0; 
+
+} 
+
+2.2 
+
+#include <stdio.h> 
+
+ 
+
+int main() 
+
+{ 
+
+int luku, nelio; 
+
+ 
+
+printf("Anna kokonaisluku: "); 
+
+scanf("%d", &luku); 
+
+ 
+
+nelio = luku * luku; 
+
+ 
+
+printf("Antamasi luvun neliö on %d\n", nelio); 
+
+ 
+
+ 
+
+return 0; 
+
+} 
+
+ 
+
+3.1 
+
+#include <stdio.h> 
+
+ 
+
+int main() 
+
+{ 
+
+int eka_luku; 
+
+double toka_luku; 
+
+ 
+
+printf("Anna kokonaisluku: "); 
+
+scanf("%d", &eka_luku); 
+
+ 
+
+printf("Anna desimaaliluku: "); 
+
+scanf("%lf", &toka_luku); 
+
+ 
+
+ 
+
+ 
+
+printf("Syöttämäsi kokonaisluku: %d\n", eka_luku); 
+
+printf("Syöttämäsi desimaaliluku kahden desimaalin tarkkuudella: %.2f", toka_luku); 
+
+ 
+
+ 
+
+return 0; 
+
+} 
+
+3.2 
+
+#include <stdio.h> 
+
+ 
+
+int main() 
+
+{ 
+
+double markat; 
+
+double eurot; 
+
+float kerroin = 5.94573; 
+
+ 
+
+printf("Syötä jokin markkamäärä: "); 
+
+scanf("%lf", &markat); 
+
+ 
+
+eurot = markat / kerroin; 
+
+ 
+
+ 
+
+printf("Markat euroina: %.2f", eurot); 
+
+ 
+
+ 
+
+ 
+
+return 0; 
+
+} 
+
+4.1 
+
+#include <stdio.h> 
+
+ 
+
+int main() 
+
+{ 
+
+int eka_luku; 
+
+int toka_luku; 
+
+int summa; 
+
+int miinus; 
+
+int kerto; 
+
+ 
+
+printf("Anna eka luku: "); 
+
+scanf("%d", &eka_luku); 
+
+ 
+
+printf("Anna toka luku: "); 
+
+scanf("%d", &toka_luku); 
+
+ 
+
+summa = eka_luku + toka_luku; 
+
+miinus = eka_luku - toka_luku; 
+
+kerto = eka_luku * toka_luku; 
+
+ 
+
+printf("\n%d %s %d %s %d \n%d %s %d %s %d \n%d %s %d %s %d", eka_luku, "+", toka_luku, "=", summa,eka_luku, "-", toka_luku, "=", miinus,eka_luku, "*", toka_luku, "=", kerto); 
+
+ 
+
+ 
+
+return 0; 
+
+} 
+
+4.2 
+
+#include <stdio.h> 
+
+ 
+
+int main() 
+
+{ 
+
+int luku; 
+
+int luku1; 
+
+ 
+
+ 
+
+printf("Anna kokonaisluku: "); 
+
+scanf("%d", &luku); 
+
+ 
+
+luku1 = luku % 2; 
+
+ 
+
+printf("Luku on %d", luku1); 
+
+return 0; 
+
+} 
+
+5.1 
+
+#include <stdio.h> 
+
+ 
+
+int main() 
+
+{ 
+
+int luku; 
+
+int luku1; 
+
+ 
+
+ 
+
+printf("Anna kokonaisluku: "); 
+
+scanf("%d", &luku); 
+
+ 
+
+luku1 = luku % 2; 
+
+ 
+
+if(luku1 == 0) 
+
+printf("%s %d %s","Luku", luku, "on parillinen."); 
+
+else 
+
+printf("%s %d %s","Luku", luku, "on pariton."); 
+
+ 
+
+return 0; 
+
+} 
+
+5.2 
+
+#include <stdio.h> 
+
+ 
+
+int main()  
+
+{ 
+
+char sukupuoli; 
+
+int ika; 
+
+ 
+
+printf("Oletko mies vai nainen (m/n)?"); 
+
+sukupuoli = getchar(); 
+
+printf("Anna ikäsi:"); 
+
+scanf("%d", &ika); 
+
+ 
+
+if (sukupuoli == 'm' && ika < 55) 
+
+printf("Olet mies parhaassa iässä!"); 
+
+ 
+
+else if (sukupuoli == 'm' && ika > 56) 
+
+printf("Olet viisas mies!"); 
+
+ 
+
+else if (sukupuoli == 'n' && ika < 55) 
+
+printf("Olet neito kauneimmillaan!"); 
+
+else if (sukupuoli == 'n' && ika > 56) 
+
+printf("Näytät nuorelta ikäiseksesi!"); 
+
+else 
+
+printf("Ohjelmassa on tapahtunut virhe!"); 
+
+ 
+
+ 
+
+return 0; 
+
+} 
+
+5.3 
+
+int main()  
+
+{  
+
+int numero,eka,toka,miinus,plus,tulos;  
+
+printf("1: vähennyslasku \n"); 
+
+printf("2: yhteenlasku \n"); 
+
+printf("3: kertolasku \n"); 
+
+ 
+
+printf("Valitse toiminto:");  
+
+scanf("%d", &numero);  
+
+ 
+
+printf("Anna eka luku:"); 
+
+scanf("%d", &eka); 
+
+printf("Anna toka luku:"); 
+
+scanf("%d", &toka);  
+
+ 
+
+miinus = eka - toka; 
+
+plus = eka + toka; 
+
+tulos = eka * toka; 
+
+ 
+
+switch(numero) {  
+
+case 1:  
+
+{  
+
+printf("%d%s%d%s%d", eka, "-", toka, "=", miinus);  
+
+break;  
+
+}  
+
+case 2:  
+
+{   
+
+printf("%d%s%d%s%d", eka, "+", toka, "=", plus);  
+
+break;  
+
+}  
+
+case 3:  
+
+{  
+
+printf("%d%s%d%s%d", eka, "*", toka, "=", tulos);  
+
+break;  
+
+}  
+
+ 
+
+default:  
+
+printf("Antamasi syöte on arvoalueen ulkopuolella.\n");  
+
+                break; 
+
+}  
+
+ 
+
+return 0;  
+
+} 
+
+6.1 
+
+#include <stdio.h>  
+
+    
+
+int main()  
+
+{  
+
+int luku, i; 
+
+ 
+
+printf("Anna kokonaisluku:"); 
+
+scanf("%d", &luku); 
+
+ 
+
+ 
+
+for(i = 1; i <= luku; ++i) {  
+
+ 
+
+printf("%d\n", i); 
+
+ 
+
+} 
+
+ 
+
+return 0;  
+
+} 
+
+6.2 
+
+#include <stdio.h> 
+
+ 
+
+int main(void){ 
+
+ 
+
+int i, luku, kertoma = 1; 
+
+ 
+
+printf("Anna kokonaisluku:"); 
+
+scanf("%d", &luku); 
+
+ 
+
+ 
+
+for (i=1 ;i <= luku; i++){ 
+
+kertoma *= i; 
+
+} 
+
+ 
+
+printf("%s%d%s%d","Luvun ", luku, " kertoma on ", kertoma); 
+
+ 
+
+ 
+
+return 0; 
+
+} 
+
+6.3 
+
+#include <stdio.h>   
+
+ 
+
+int main()   
+
+{   
+
+float as = 0, yht = 0; 
+
+float ka = 0; 
+
+int i = 0; 
+
+printf("Ohjelma laskee syötettyjen arvosanojen keskiarvon.\n"); 
+
+printf("Lopetus negatiivisella kokonaisluvulla.\n"); 
+
+do {   
+
+printf("Anna arvosana (4-10):");   
+
+scanf("%f", &as); 
+
+if(as > 0) { 
+
+yht = yht + as; 
+
+    i++; 
+
+} else { 
+
+} 
+
+ 
+
+    ka = yht / i; 
+
+} while(as > 0);   
+
+ 
+
+ 
+
+    
+
+printf("%s%d%s\n","Ohjelmaan syötetty ", i, " arvosanaa."); 
+
+printf("%s%.2f","Arvosanojen keskiarvo: ", ka); 
+
+return 0;   
+
+} 
+
+7.1 
+
+kissa(){ 
+
+printf("Kissa sanoo miau!"); 
+
+} 
+
+koira(){ 
+
+printf("Koira sanoo hau-hau!"); 
+
+} 
+
+lehma(){ 
+
+printf("Lehmä sanoo ammuu!"); 
+
+} 
+
+7.2 
+
+#include <stdio.h> 
+
+ 
+
+int plus(luku1,luku2); 
+
+int miinus(luku1,luku2); 
+
+int kerto(luku1,luku2); 
+
+ 
+
+ 
+
+int main(void) 
+
+{ 
+
+  int valinta; 
+
+  int luku1; 
+
+  int luku2; 
+
+  int tulos; 
+
+ 
+
+  do{ 
+
+ 
+
+    printf("1: kahden luvun summa\n2: kahden luvun erotus\n3: kahden luvun tulo\n"); 
+
+    printf("<0: ohjelman lopetus\n"); 
+
+    printf("Valitse laskutoimitus:"); 
+
+    scanf("%d", &valinta); 
+
+ 
+
+    if(valinta < 0) { 
+
+      printf("Ohjelma lopetetaan..."); 
+
+    } 
+
+else { 
+
+printf("Syötä ensimmäinen luku:"); 
+
+scanf("%d", &luku1); 
+
+printf("Syötä toinen luku:"); 
+
+scanf("%d", &luku2); 
+
+  } 
+
+    if(valinta == 1) { 
+
+      tulos = plus(luku1,luku2); 
+
+  printf("%d %s %d %s %d\n",luku1, "+", luku2,"=", tulos); 
+
+   
+
+    } 
+
+    else if(valinta == 2) { 
+
+      tulos = miinus(luku1,luku2); 
+
+  printf("%d %s %d %s %d\n",luku1, "-", luku2,"=", tulos); 
+
+    } 
+
+    else if(valinta == 3) { 
+
+      tulos = kerto(luku1,luku2); 
+
+  printf("%d %s %d %s %d\n",luku1, "*", luku2,"=", tulos); 
+
+    } 
+
+     
+
+  }while(valinta>0); 
+
+ 
+
+  return 0; 
+
+} 
+
+ 
+
+plus(luku1, luku2){ 
+
+int tulos; 
+
+tulos = luku1 + luku2; 
+
+ 
+
+return tulos; 
+
+} 
+
+ 
+
+miinus(luku1, luku2){ 
+
+int tulos; 
+
+tulos = luku1 - luku2; 
+
+ 
+
+return tulos; 
+
+} 
+
+ 
+
+kerto(luku1, luku2){ 
+
+int tulos; 
+
+tulos = luku1 * luku2; 
+
+ 
+
+} 
+
+7.3 
+
+#include <stdio.h> 
+
+ 
+
+int suurin(luku1,luku2,luku3); 
+
+int pienin(luku1,luku2,luku3); 
+
+ 
+
+ 
+
+ 
+
+int main(void) 
+
+{ 
+
+  int valinta; 
+
+  int luku1; 
+
+  int luku2; 
+
+  int luku3; 
+
+  int tulos; 
+
+  int tulos1; 
+
+ 
+
+     
+
+printf("Anna 1. luku:"); 
+
+scanf("%d", &luku1); 
+
+printf("Anna 2. luku:"); 
+
+scanf("%d", &luku2); 
+
+printf("Anna 3. luku:"); 
+
+scanf("%d", &luku3); 
+
+ 
+
+tulos = suurin(luku1,luku2,luku3); 
+
+tulos1 = pienin(luku1,luku2,luku3); 
+
+ 
+
+printf("%s %d %s %d %s","Syöttämistäsi luvuista suurin oli ", tulos, " ja pienin ", tulos1, "."); 
+
+ 
+
+  return 0; 
+
+} 
+
+ 
+
+suurin(luku1, luku2, luku3){ 
+
+int tulos; 
+
+if(luku1 > luku2 && luku1 > luku3) { 
+
+tulos = luku1; 
+
+} 
+
+else if(luku2 > luku1 && luku2 > luku3){ 
+
+tulos = luku2; 
+
+} 
+
+else { 
+
+tulos = luku3; 
+
+} 
+
+ 
+
+return tulos; 
+
+} 
+
+ 
+
+pienin(luku1, luku2, luku3){ 
+
+int tulos1; 
+
+if(luku1 < luku2 && luku1 < luku3) { 
+
+tulos1 = luku1; 
+
+} 
+
+else if(luku2 < luku1 && luku2 < luku3){ 
+
+tulos1 = luku2; 
+
+} 
+
+else { 
+
+tulos1 = luku3; 
+
+} 
+
+return tulos1; 
+
+} 
+
+8.1 
+
+#include <stdio.h> 
+
+ 
+
+int main() 
+
+{ 
+
+float tunnit[30]; 
+
+int indeksi; 
+
+float yhteensa; 
+
+float ka; 
+
+int maara; 
+
+ 
+
+printf("Ohjelma laskee yhteen haluamasi ajanjakson aikana\ntehdyt työtunnit sekä keskimääräisen työpäivän pituuden.\n\n"); 
+
+printf("Kuinka monta päivää:"); 
+
+scanf("%d", &maara); 
+
+ 
+
+ 
+
+for(indeksi=0; indeksi<maara; indeksi++) { 
+
+printf("Anna %d. päivän työtunnit: ", indeksi+1); 
+
+scanf("%f", &tunnit[indeksi]); 
+
+yhteensa = yhteensa + tunnit[indeksi]; 
+
+} 
+
+ 
+
+printf("\n"); 
+
+printf("Tehdyt työtunnit yhteensä: %.1f\n", yhteensa); 
+
+ka = yhteensa / maara; 
+
+printf("%s %.1f\n", "Keskimääräinen työpäivän pituus:",ka); 
+
+ 
+
+printf("Syötetyt tunnit: "); 
+
+for(indeksi=0; indeksi <= maara -1; indeksi++) { 
+
+printf("%.1f ",tunnit[indeksi]); 
+
+} 
+
+ 
+
+ 
+
+ 
+
+return 0; 
+
+} 
+
+8.2 
+
+- 
+
+9.1 
+
+#include <stdio.h>  
+
+int main(void)   
+
+{   
+
+FILE *avaus = fopen("hello.usr", "w");   
+
+fprintf(avaus, "Moi maailma!");  
+
+fclose(avaus); 
+
+printf("Tiedostoon kirjoittaminen onnistui.\n"); 
+
+printf("Ohjelma suljetaan."); 
+
+return 0;   
+
+} 
+
+9.2 
+
+#include<stdio.h> 
+
+int main(void) 
+
+{ 
+
+FILE *tied_kahv; 
+
+int luettu_luku; 
+
+int summa, luku1, luku2, luku3, luku4; 
+
+ 
+
+if((tied_kahv = fopen("luvut.s", "r")) == NULL) { 
+
+printf("Tiedostoa ei löydetty!"); return 0; 
+
+} else { 
+
+fscanf(tied_kahv, "%d %d %d %d", &luku1, &luku2, &luku3, &luku4);  
+
+fclose(tied_kahv); 
+
+ 
+
+printf("Tiedostosta luvut.s löytyneet luvut:\n%d, %d, %d %s %d\n\n",luku1, luku2, luku3, "ja", luku4); 
+
+summa = luku1+luku2+luku3+luku4; 
+
+printf("Lukujen summa: %d", summa); 
+
+} 
+
+return 0; 
+
+} 
+
+9.3 
+
+- 
+
+10.1 
+
+#include <stdio.h> 
+
+ 
+
+int main() { 
+
+ 
+
+char sukunimi[21]; 
+
+char etunimi[16], tiedosto[13]; 
+
+ 
+
+printf("Ohjelma tallentaa etunimesi ja sukunimesi tiedostoon."); 
+
+printf("\nSyötä etunimesi:"); 
+
+scanf("%s", etunimi); 
+
+printf("Syötä sukunimesi:"); 
+
+scanf("%s", sukunimi); 
+
+printf("\nTiedosto johon haluat tallentaa nimesi:"); 
+
+scanf("%s",tiedosto); 
+
+FILE *avaus = fopen(tiedosto, "w"); 
+
+fprintf(avaus, etunimi); 
+
+fprintf(avaus, sukunimi); 
+
+fclose(avaus); 
+
+printf("\n\nTallennus onnistui!"); 
+
+return 0; 
+
+} 
+
+10.2 
+
+- 
+
+11.1 
+
+- 
+
+11.2 
+
+#include <stdio.h> 
+
+  
+
+int main (int argc, const char * argv[]) 
+
+{ 
+
+    FILE *f; 
+
+    char s[1000]; 
+
+ 
+
+      
+
+    f=fopen("luettelo.txt", "r"); 
+
+char buffer[100]; 
+
+fgets(buffer, 100, f); 
+
+ 
+
+    if(!f) 
+
+        return 1; 
+
+    while (fgets(s,1000,f)!=NULL) { 
+
+        printf("%s", s); 
+
+    } 
+
+    fclose(f); 
+
+    return 0; 
+
+} 
+
+11.3 
+
+12.1 
+
+ 
+
+muuta_lukua(x){ 
+
+x = x + 3; 
+
+printf("%s%d\n","Aliohjelmassa: x = ", x); 
+
+} 
+
+12.2 
+
+muuta_lukua(int *x){ 
+
+     
+
+    *x = *x + 3; 
+
+     
+
+     
+
+     
+
+printf("Aliohjelmassa: x = %d\n", *x); 
+
+ 
+
+} 

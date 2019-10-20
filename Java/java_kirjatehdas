@@ -1,0 +1,135 @@
+public class Kirja { 
+
+ 
+
+private String teoksenNimi; 
+
+private int julkaisuVuosi; 
+
+private String tekijä; 
+
+private double hinta; 
+
+ 
+
+public Kirja(){ 
+
+teoksenNimi = "Ei nimeä"; 
+
+julkaisuVuosi = 0; 
+
+tekijä = "Ei tekijää"; 
+
+hinta = 0.0; 
+
+ 
+
+ 
+
+} 
+
+ 
+
+public Kirja(String teoksenUusiNimi, String uusiTekijä, int uusiJulkaisuVuosi, double uusiHinta){ 
+
+this.teoksenNimi = teoksenUusiNimi; 
+
+this.julkaisuVuosi = uusiJulkaisuVuosi; 
+
+this.tekijä = uusiTekijä; 
+
+this.hinta = uusiHinta; 
+
+} 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+public String getTeoksenNimi(){ 
+
+return teoksenNimi; 
+
+} 
+
+ 
+
+public void setTeoksenNimi(String teoksenUusiNimi){ 
+
+this.teoksenNimi = teoksenUusiNimi; 
+
+} 
+
+ 
+
+public String getTekijä(){ 
+
+return tekijä; 
+
+} 
+
+ 
+
+public void setTekijä(String uusiTekijä){ 
+
+this.tekijä = uusiTekijä; 
+
+} 
+
+ 
+
+public int getJulkaisuVuosi(){ 
+
+return julkaisuVuosi; 
+
+} 
+
+ 
+
+public void setJulkaisuVuosi(int uusiJulkaisuVuosi){ 
+
+this.julkaisuVuosi = uusiJulkaisuVuosi; 
+
+} 
+
+ 
+
+public double getHinta(){ 
+
+return hinta; 
+
+} 
+
+ 
+
+public void setHinta(double uusiHinta){ 
+
+this.hinta = uusiHinta; 
+
+} 
+
+ 
+
+public String toString(){ 
+
+String tuloste = "Kirja on nimeltään: " +  
+
+teoksenNimi + ", julkaisuvuosi: " + julkaisuVuosi + ", tekijä: " + tekijä + 
+
+", hinta: " + hinta + "€"; 
+
+return tuloste; 
+
+} 
+
+ 
+
+ 
+
+} 
