@@ -1,0 +1,374 @@
+C++ viopet
+1.1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int luku;
+
+  cout << "Anna kokonaisluku:";
+  cin >> luku;
+  cout << "Luku oli: " << luku << endl;
+}
+2.1
+#include <iostream>
+using namespace std; 
+int main()
+{
+  cout << "Terve vaan kaikille!" << endl;
+}
+2.2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int luku;
+	int luku1;
+	int summa;
+
+	cout << "Anna ensimmäinen luku: ";
+	cin >> luku;
+	cout << "Anna toinen luku: ";
+	cin >> luku1;
+	summa = luku + luku1;
+	cout << "Antamiesi lukujen summa on " << summa << endl;
+}
+3.1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double markat;
+	double eurot;
+
+
+	cout << "Syötä jokin markkamäärä: ";
+	cin >> markat;
+	eurot = markat / 5.94573 ;
+	cout << "Markat euroina: " << eurot << endl;
+}
+3.2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double sade;
+	double pa;
+
+	cout << "Anna ympyrän säde: ";
+	cin >> sade;
+	pa = 3.142 * sade * sade;
+	cout << "Ympyrän ala annetulla säteellä: " << pa << endl;
+}
+4.1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int luku, luku2, summa, erotus, kerto, jj;
+
+	cout << "Syötä ensimmäinen kokonaisluku: ";
+	cin >> luku;
+
+	cout << "Syötä toinen kokonaisluku: ";
+	cin >> luku2;
+	
+	summa = luku + luku2;
+	erotus = luku - luku2;
+	kerto = luku * luku2;
+	jj = luku % luku2;
+	
+	/* huomaa seuraavassa ++ -operaattorin käyttö */
+	cout << luku << "+" << luku2 << "=" <<  summa << "\n";
+	cout << luku << "-" << luku2 << "=" <<  erotus << "\n"; 
+	cout << luku << "*" << luku2 << "=" <<  kerto << "\n";
+
+	cout << "Jakojäännös: " << jj;
+
+	return 0;
+}
+4.2
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int luku_1, luku_2;
+	double juuri;
+
+	cout << "Anna ensimmäinen kateetti: ";
+	cin >> luku_1;
+
+	cout << "Anna toinen kateetti: ";
+	cin >> luku_2;
+	
+	juuri = (luku_1*luku_1)+(luku_2*luku_2);
+    
+    cout << "Hypotenuusan pituus:" << sqrt(juuri) << endl;
+
+	
+
+	return 0;
+}
+5.1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int luku;
+	cout << "Anna kokonaisluku: ";
+	cin >> luku;
+
+	if(luku % 2 == 0)
+		cout << "Luku " << luku << " on parillinen." << endl;
+	else
+		cout << "Luku " << luku << " on pariton." << endl;
+}
+5.2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int ika;
+	char sukupuoli;
+	
+	cout << "Oletko mies vai nainen (m/n)";
+	cin >> sukupuoli;
+	
+	cout << "Anna ikäsi: ";
+	cin >> ika;
+
+	if(ika > 0 && ika < 55)
+		if(sukupuoli == 'm')
+		cout << "Olet mies parhaassa iässä!" << endl;
+		else
+		cout << "Olet neito kauneimmillaan!" << endl;
+	else if(ika >= 56 && ika < 100)
+		if(sukupuoli == 'm')
+		cout << "Olet viisas mies!" << endl;
+		else
+		cout << "Olet nuori ikäiseksesi!" << endl;
+		
+		
+		
+	
+	
+	else
+		cout << "Ohjelmassa tapahtunut virhe!" << endl;
+}
+5.3
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int luku_1, luku_2, valinta;
+    
+    cout << "Käytössäsi on seuraavat laskutoimitukset:\n";
+    cout << "1: vähennyslasku\n";
+    cout << "2: yhteenlasku\n";
+    cout << "3: kertolasku\n";
+    cout << "4: osamäärä\n";
+    cout << "5: jakojäännös\n";
+    
+    cout << "Valitse laskutoimitus:"; cin >> valinta;
+    cout << "Anna eka luku:"; cin >> luku_1;
+    cout << "Anna toinen luku:"; cin >> luku_2;
+    switch(valinta)
+    {
+    case 1:
+        cout << luku_1 << "-" << luku_2 << " = " << luku_1-luku_2 << endl;
+        break; 
+    case 2:
+        cout << luku_1 <<"+" << luku_2 <<" = "<< luku_1+luku_2 << endl;
+             break;
+    case 3:
+        cout << luku_1 << "*" << luku_2 << " = " << luku_1*luku_2 << endl;
+        break;
+    case 4:
+        cout << luku_1 << "/" << luku_2 << " = " << luku_1/luku_2 << endl;
+        break;
+    case 5:
+        cout << luku_1 << "%" << luku_2 << " = " << luku_1%luku_2 << endl;
+        break;
+    default:
+        cout << "Paina ensi kerralla lukua 1-5!" << endl;
+    }
+    return 0; 
+}
+6.1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int kokonaisluku, i=1;
+
+    cout << "Anna kokonaisluku:";
+    cin >> kokonaisluku;
+    
+    for(i; i<=kokonaisluku; i++) {
+        cout << i << endl;
+    }
+}
+6.2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int kertoma=1, luku, i;
+
+    cout << "Anna kokonaisluku:";
+    cin >> luku;
+    
+    for(i=1; i<=luku; i++) {
+        kertoma=kertoma*i;
+    }
+    cout << "Luvun " << luku << " kertoma on " << kertoma  << endl;
+}
+6.3
+#include<iostream> 
+using namespace std;
+
+int main(void)
+{
+    float summa=0, lukumaara=0;
+    float numero=0, keskiarvo;
+
+    cout << "Ohjelma laskee koearvosanojen keskiarvon.\n";
+    cout << "Lukujen syöttämisen lopetus negatiivisella luvulla.\n";
+    
+    while(numero>=0) {
+
+        cout << "Anna arvosana (4-10)";
+        cin >> numero;
+        if(numero>3 && numero<11) {
+                    summa= summa+numero;
+                    lukumaara++;
+            } else if(numero<0) {
+                break;
+                 }
+    }
+
+           keskiarvo=summa/lukumaara;
+        cout << "Ohjelmaan syötetty " << lukumaara << " arvosanaa." << endl;
+        cout << "Arvosanojen keskiarvo:" << keskiarvo << endl;
+    return(0);
+}
+7.1
+int suurin(int luku1, int luku2,int luku3)
+{
+ int suurin;
+ suurin = luku1;
+ if (luku2 > suurin) {
+   suurin = luku2;
+ }
+ if (luku3 > suurin){
+   suurin = luku3;
+ }
+ return suurin;
+}
+
+int pienin(int luku1, int luku2,int luku3)
+{
+ int pienin;
+ pienin = luku1;
+ if (luku2 < pienin) {
+   pienin = luku2;
+ }
+ if (luku3 < pienin){
+   pienin = luku3;
+ }
+ return pienin;
+}
+8.1
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+   int paiva, paivat;
+   float yht=0, laskuri, keskiarvo;
+
+   cout << "Ohjelma laskee yhteen haluamasi ajanjakson aikana tehdyt\n";
+   cout << "työtunnit sekä keskimääräisen työpäivän pituuden.\n";
+   cout << "Kuinka monta päivää:\n";
+   cin >> paivat;
+   float taulukko[paivat+1];
+   int indeksi=1;
+
+   for(paiva=1; paiva <= paivat; paiva++)
+   {
+     cout << "Anna " << paiva << ". päivän työtunnit:";
+     cin >> laskuri;
+     taulukko[paiva]=laskuri;
+     yht = yht+laskuri;
+   }
+
+   cout << "Tehdyt tunnit yhteensä: " << yht << endl;
+   keskiarvo = yht / paivat;
+   cout << "Keskimääräinen työpäivän pituus: " << keskiarvo << endl;
+   cout << "Syötetyt tunnit: ";
+   
+   for(indeksi=1; indeksi<=paivat; indeksi++)
+   {
+       cout << taulukko[indeksi] << " ";
+   }
+   cout << "\n";
+}
+8.2
+void tulosta_matriisi(int matriisi[5][5])
+{
+
+for(int i=0; i<5; i++)
+{
+for(int j=0; j<5; j++)
+cout << matriisi[i][j] << " ";
+	if(i < 4){
+cout << endl;
+	} else;
+	
+}
+
+
+
+return;
+}
+
+int laske_summa(int matriisi[5][5])
+{
+int summa = 0;
+for(int i=0; i<5; i++)
+for(int j=0; j<5; j++)
+summa = summa+matriisi[i][j];
+cout << endl;
+return summa;
+}
+9.1
+
+class Tulostusluokka {
+	public:
+	void Tulosta(string tulostettava){
+		cout << tulostettava << endl;
+	}
+};
+9.2
+
+class KysyJaTulosta {
+	public:
+	void TeeHommasi (string merkkijono){
+	cout << "Anna merkkijono, jonka tulostan:" << endl;
+	getline(std::cin, merkkijono);
+	cout <<  merkkijono << endl;
+	
+	}
+};
