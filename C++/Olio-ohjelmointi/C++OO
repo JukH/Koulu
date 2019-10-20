@@ -1,0 +1,369 @@
+C++ OO viope
+1.1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int kokonaisluku, i=1;
+
+    cout << "Anna kokonaisluku:";
+    cin >> kokonaisluku;
+    
+    for(i; i<=kokonaisluku; i++) {
+        cout << i << endl;
+    }
+}
+1.2
+int suurin(int luku1, int luku2,int luku3)
+{
+ int suurin;
+ suurin = luku1;
+ if (luku2 > suurin) {
+   suurin = luku2;
+ }
+ if (luku3 > suurin){
+   suurin = luku3;
+ }
+ return suurin;
+}
+
+int pienin(int luku1, int luku2,int luku3)
+{
+ int pienin;
+ pienin = luku1;
+ if (luku2 < pienin) {
+   pienin = luku2;
+ }
+ if (luku3 < pienin){
+   pienin = luku3;
+ }
+ return pienin;
+}
+1.3
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int luku_1, luku_2;
+	double juuri;
+
+	cout << "Anna ensimmäinen kateetti: ";
+	cin >> luku_1;
+
+	cout << "Anna toinen kateetti: ";
+	cin >> luku_2;
+	
+	juuri = (luku_1*luku_1)+(luku_2*luku_2);
+    
+    cout << "Hypotenuusan pituus:" << sqrt(juuri) << endl;
+
+	
+
+	return 0;
+}
+2.1
+class Piste{
+	public:
+	void AsetaX(int x);
+	void AsetaY(int y);
+	void Siirra(int x, int y);
+	void KerroPaikka();
+	
+	private:
+	int x_;
+	int y_;
+
+};
+2.2
+void Piste::AsetaX(int x) 
+{ 
+  x_ = x; 
+} 
+
+void Piste::AsetaY(int y) 
+{ 
+  y_ = y; 
+}
+
+void Piste::Siirra(int x, int y)
+{
+  x_ = x_ + x;
+  y_ = y_ + y;
+}
+
+void Piste::KerroPaikka()
+{
+  cout << "Pisteen x-koordinaatti: " << x_ << endl;
+  cout << "Pisteen y-koordinaatti: " << y_ << endl;
+
+}
+2.3
+int main() 
+{ 
+	int annax;
+	int annay;
+	
+	Piste pikseli;
+	cout << "Syötä x-koordinaatti:";
+	cin >> annax;
+	pikseli.AsetaX(annax); 
+	cout << "Syötä y-koordinaatti:";
+	cin >> annay;
+ pikseli.AsetaY(annay);
+
+  cout << "Pisteolio muodostettu ja koordinaatit asetettu.\n";
+ 
+  pikseli.KerroPaikka();
+  
+
+  return 0;
+}
+3.1
+class Asiakastili {
+
+public:
+	int tilinumero;
+	int saldo;
+	string nimi;
+
+	void LisaaAsiakas(int tilinro, int sald, string nim);
+	void NaytaTiedot(void);
+	void MuutaSaldoa(int saldo2);
+	int VertaaTiliNro(int numero);
+
+};
+
+void Asiakastili::LisaaAsiakas(int tilinro, int sald, string nim)
+{
+	tilinumero = tilinro;
+	saldo = sald;
+	nimi = nim;
+}
+
+void Asiakastili::NaytaTiedot(void)
+{
+	cout << "Tilinumero: " << tilinumero << endl;
+	cout << "Asiakkaan nimi: " << nimi << endl;
+	cout << "Tilin saldo: " << saldo << endl;
+}
+
+void Asiakastili::MuutaSaldoa(int saldo2)
+{
+	saldo = saldo2;
+}
+
+int Asiakastili::VertaaTiliNro(int tili)
+{
+	
+	if (tili == tilinumero) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+3.2
+    for (int i=0; i<5; i++){
+        if (asiakasrekisteri[i].VertaaTiliNro(tilin_nro) == 1){
+                loytyi = 1;
+                asiakasrekisteri[i].NaytaTiedot();
+                }
+               
+        else{
+        continue;
+        }
+    }
+4.1
+void muuta_lukua(int* luku)
+{
+	int luku1;
+	cout << "Anna korvaava luku: ";
+	cin >> luku1;
+	*luku = luku1;
+}
+4.2
+{
+	int luku1;
+	cout << "Anna korvaava luku: ";
+	cin >> luku1;
+	luku = luku1;
+}
+4.3
+Piste* uusi_piste()
+{
+    int x, y;
+ 
+    cout << "Anna uuden pisteen x: ";
+    cin >> x;
+    cout << "Anna uuden pisteen y: ";
+    cin >> y;
+   
+    Piste* uusiPiste = new Piste;
+   
+    uusiPiste->AsetaPiste(x, y);
+   
+    return uusiPiste;
+}
+5.1
+Piste::Piste() : x_(1), y_(1)
+{
+  
+}
+5.2
+Piste::Piste(int x, int y) : x_(x), y_(y)
+{
+}
+5.3
+Piste::~Piste()
+{
+  cout << "Tuhoaja suoritettu ja olio tuhottu.";
+}
+6.1
+class Pelaaja{
+	public:
+	void AsetaNimi(string nimi_);
+	string KerroNimi();
+	void AsetaRooli(string rooli_);
+	string KerroRooli();
+	void AsetaNro(int nro_);
+	int KerroNro();
+	
+	private:
+	string rooli_;
+	string nimi_;
+	int pelinro_;
+};
+void Pelaaja::AsetaNimi(std::string nimi_){
+	this->nimi_ = nimi_;
+}
+
+string Pelaaja::KerroNimi(){
+	return this->nimi_;
+}
+
+void Pelaaja::AsetaRooli(std::string rooli_){
+	this->rooli_ = rooli_;
+}
+
+string Pelaaja::KerroRooli(){
+	return this->rooli_;
+}
+
+void Pelaaja::AsetaNro(int pelinro_){
+	this->pelinro_ = pelinro_;
+}
+int Pelaaja::KerroNro(){
+	return this->pelinro_;
+}
+7.1
+class KorttiPakka
+{
+public:
+KorttiPakka();
+void TulostaKortti(int jnro);
+
+private:
+Kortti kortit[52];
+};
+
+KorttiPakka::KorttiPakka()
+{
+//i = maa, j = arvo
+int x = 0;
+for (int i=1; i<=4; i++)
+{
+
+for (int j=1; j<=13; j++)
+{
+kortit[x].AlustaKortti(i, j);
+
+x++;
+}
+}
+}
+void KorttiPakka::TulostaKortti(int jnro)
+{
+
+     if (kortit[jnro].KerroMaa()==1){
+            cout<<"Hertta ";
+        }
+
+     if (kortit[jnro].KerroMaa()==2){
+            cout<<"Ruutu ";
+        }
+
+     if (kortit[jnro].KerroMaa()==3){
+            cout<<"Pata ";
+        }
+
+     if (kortit[jnro].KerroMaa()==4){
+            cout<<"Risti ";
+        }
+        cout<<kortit[jnro].KerroArvo()<<endl;
+}
+7.2
+class Henkilo
+{
+public:
+	Henkilo(string uusi_merkki, Auto* oma_auto);
+	void AjaAutoa(int uudet_kilometrit);
+	void VaihdaAutoa(Auto* uusi_auto);
+private:
+	Auto* nykyinen_auto;
+};
+
+Henkilo::Henkilo(string nimi, Auto* oma_auto)
+{
+	
+	nykyinen_auto = oma_auto;
+}
+
+void Henkilo::AjaAutoa(int uudet_kilometrit)
+{
+	nykyinen_auto->Liiku(uudet_kilometrit);
+}
+
+
+void Henkilo::VaihdaAutoa(Auto* uusi_auto)
+{
+	nykyinen_auto = uusi_auto;
+}
+9.1
+class Auto : public Ajoneuvo
+{
+	public:
+	string rekisteri_nro_;
+	string merkki_;
+	string malli_;
+	int paino_;
+	int ajetut_;
+	const int matkustajat_max_;
+	Auto(int ajetut_, int paino_, string merkki_, string malli_, string rekisteri_nro_, const int matkustajat_max_);
+	void TulostaAutonTiedot();
+	void AjaAutoa(int km);
+	private:
+};
+
+Auto::Auto(int ajetut_, int paino_, string merkki_, string malli_, string rekisteri_nro_, const int matkustajat_max_) : Ajoneuvo(ajetut_, paino_, merkki_, malli_), rekisteri_nro_(rekisteri_nro_),
+matkustajat_max_(matkustajat_max_)
+{}
+
+void Auto::TulostaAutonTiedot()
+{
+cout << "Merkki: " << PalautaMerkki() << endl ;
+cout << "Malli: " << PalautaMalli() << endl;
+cout << "Paino: " << PalautaPaino()  << endl;
+cout << "Ajetut kilometrit: " << PalautaAjetut() << endl;
+cout << "Rekisterinumero: "<< rekisteri_nro_<< endl;
+
+cout << "Maksimi matkustajien määrä: " <<  matkustajat_max_ << "\n" <<  endl;
+}
+void Auto::AjaAutoa(int km)
+{
+	this->Liikuta(km);
+	cout << "Autolla ajettu " << km << " kilometriä.\n" << endl;
+	
+}
