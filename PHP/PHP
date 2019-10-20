@@ -1,0 +1,357 @@
+2.1
+<?php
+    echo "Tämä on ensimmäinen ohjelma.";
+    echo "Tästä se ohjelmoinnin opiskelu alkaa!";
+?>
+3.1
+<?php
+    echo "Tämä ohjelma sisältää virheitä.\n";
+    echo "Tehtävänäsi on korjata virheet.";
+?>
+3.2
+Nimesi on <?php echo $_GET["enimi"] . " " . $_GET["snimi"]; ?>
+3.3
+Lempivärisi on <?php echo $_GET["lempivari"];?> ja lempiruokasi on <?php echo $_GET["lempiruoka"];?>
+4.1
+<?php 
+	$luku = $_GET["luku"];
+	$pos = abs($luku);
+echo "Luvun " .$luku . " itseisarvo on " .$pos;
+?>
+4.2
+
+<?php
+$sukupuoli = $_GET["sukupuoli"];
+$ika = $_GET["ika"];
+
+if ($sukupuoli=="mies" && $ika=="1")
+ {
+ echo "Olet mies parhaassa iässä!";
+ }
+elseif ($sukupuoli=="mies" && $ika=="2")
+ {
+ echo "Olet viisas mies!";
+ }
+elseif ($sukupuoli=="nainen" && $ika=="1")
+ {
+ echo "Olet neito kauneimmillaan!";
+ }
+elseif ($sukupuoli=="nainen" && $ika=="2")
+ {
+ echo "Näytät nuorelta ikäiseksesi!";
+ }
+
+?>
+4.3
+<?php
+$nimi = $_GET["nimi"];
+$viesti = $_GET["viesti"];
+
+if($nimi == "" || $viesti == ""){
+echo "Et antanut kaikkia tietoja!";}
+else
+echo $nimi . ": " . $viesti;
+?>
+4.4
+<?php
+	$luku = $_GET["luku"];
+	
+if($luku < 0){
+echo "Luvun pitää olla vähintään nolla!";
+} else {
+	while($luku >= 0){
+		if($luku > 0){
+			echo $luku . " ";
+		} else
+			echo $luku;
+	$luku--;
+	}
+}
+	
+?>
+4.5
+<?php 
+$eka = $_GET["ekaluku"];
+$toka = $_GET["tokaluku"];
+
+echo "Kertolaskun tulos: " . ($eka * $toka) . "\n";
+if($eka == 0 || $toka == 0) {
+echo "Jakolaskun tulos: nollalla ei saa jakaa";
+} else {
+echo "Jakolaskun tulos: ". ($eka / $toka);
+}
+?>
+4.6
+<?php 
+$palkka = $_GET["tuntipalkka"];
+$veroPros = $_GET["veroprosentti"];
+$tunnit = $_GET["tunnit"];
+
+$verotonpalkka = ($palkka * $tunnit);
+$veropalkasta = ($tunnit*$palkka*$veroPros/100);
+$netto = ($verotonpalkka - $veropalkasta);
+
+if($palkka == "" || $veroPros == "" || $tunnit == ""){
+echo "Et antanut kaikkia tietoja!";
+} 
+else{
+echo "Palkka ilman veroja: " . $verotonpalkka . "\n";
+echo "Veron osuus palkasta: " . $veropalkasta. "\n";
+echo "Palkka verojen jälkeen: " . $netto . "\n";
+	
+}
+?>
+5.1
+
+$taulu["Ville Veikko"] = "Koodaajapolku 10";
+$taulu["Taneli Teräs"] = "Tanelinpolku 5";
+$taulu["Maija Meikäläinen"] = "Opiskelijantie 5";
+5.2
+
+for($i = 0; $i < count($lukutaulukko); $i++){
+$summa = $summa + $lukutaulukko[$i];
+}
+$pisteet = str_replace(","," ", $lukujono);
+$keskiarvo = ($summa / count($lukutaulukko));
+5.3
+$t=$taulukko;
+for($i = 0; $i<count($t)-1; $i++) {
+    if($t[$i] < $t[$i+1]) {
+        $apu = $t[$i+1];
+        $t[$i+1] = $t[$i];
+        $t[$i] = $apu;
+        $i=-1;
+    }
+}
+$suurin_pienin=implode(', ', $t);
+ 
+
+$t1=$taulukko;
+for($j=0; $j != count($t1)-1; $j++) {
+    if($t1[$j] > $t1[$j+1]) {
+        $apu = $t1[$j+1];
+        $t1[$j+1] = $t1[$j];
+        $t1[$j] = $apu;
+        $j = -1;
+    }
+}
+$pienin_suurin=implode(', ', $t1);
+6.1
+$teksti = 'Lainausmerkkien(" ja ") sisällä voi käyttää kenoviivalla(\\) merkittyjä erikoiskoodeja.'. "\n";
+
+$taulukkoon = "9, 7, 5";
+$a = explode(',',$taulukkoon);
+$lkm = 3;
+$elain = "kissa";
+6.2
+<?php 
+$jono = $_GET["merkkijono1"];
+$jono1 = $_GET["merkkijono2"];
+
+if($jono != "" && $jono1 != ""){
+$trim = trim($jono);
+$trim1 = trim($jono1);
+
+$pituus = strlen($trim);
+$pituus1 = strlen($trim1);
+$kokopituus = ($pituus + $pituus1);
+
+echo "Antamasi merkkijonot olivat \"". trim($jono) . '"'. " ja " .'"'. trim($jono1) . '"'.". Niiden pituus yhteensä on " . $kokopituus . " merkkiä!";
+} else
+	echo "Et antanut molempia merkkijonoja!";
+
+?>
+6.3
+<?php
+$luku = $_GET["luku"];
+if($luku % 2 == 0){
+echo "Luku ". $luku . " on parillinen.";
+} 
+elseif($luku % 2 != 0 && $luku > 0){
+	echo "Luku ". $luku . " on pariton.";
+}
+elseif($luku <= 0){
+echo "Antamasi syöte ei ollut kelvollinen!";
+}
+?>
+6.4
+<?php
+$eka = $_GET["ekaluku"];
+$toka = $_GET["tokaluku"];
+$valinta = $_GET["operator"];
+
+if($eka != "" && $toka != ""){
+if($valinta == 1){
+$plus = $eka + $toka;
+	echo $eka . " + " . $toka . " = " . $plus;
+}
+elseif($valinta == 2){
+$miinus = $eka - $toka;
+	echo $eka . " - " . $toka . " = " . $miinus;
+}
+elseif($valinta == 3){
+$kerto = $eka * $toka;
+	echo $eka . " * " . $toka . " = " . $kerto;
+}
+elseif($valinta == 4){
+$jako = $eka /$toka;
+	echo $eka . " / " . $toka . " = " . $jako;
+}} else
+	echo "Et antanut molempia lukuja!";
+?>
+7.1
+function suurin($eka, $toka, $kolmas){
+	if($eka > $toka && $eka > $kolmas){
+	$suurin_luku = $eka;
+	}
+	elseif($toka > $eka && $toka > $kolmas){
+	$suurin_luku = $toka;
+	} else {
+		$suurin_luku = $kolmas;
+	}
+	return $suurin_luku;
+}
+
+function pienin($eka, $toka, $kolmas){
+	if($eka < $toka && $eka < $kolmas){
+	$pienin_luku = $eka;
+	}
+	elseif($toka < $eka && $toka < $kolmas){
+	$pienin_luku = $toka;
+	} else {
+		$pienin_luku = $kolmas;
+	}
+	return $pienin_luku;
+}
+
+7.2
+<?php
+$teksti = $_GET["merkkijono"];
+$valinta = $_GET["mode"];
+
+if($valinta == 1){
+	echo strtolower(chunk_split($teksti, 1, ' '));
+}
+elseif($valinta == 2){
+	echo strtoupper(chunk_split($teksti, 1, ' '));
+}
+elseif($valinta == 3){
+	echo strtolower(strrev($teksti));
+}
+elseif($valinta == 4){
+	echo strtoupper(strrev($teksti));
+} else {
+}
+?>
+7.3
+
+	 function uusiarvo (&$merkkijono){
+                echo "Merkkijono aluksi: $merkkijono";
+       
+        $uusimerkkijono =& $merkkijono;
+                $uusimerkkijono = "Uusi merkkijono";
+               
+               
+               
+        }
+8.1
+<?php
+
+$tiea = "arvosanat.txt";
+$tieb = "tulokset.txt";
+
+$a=fopen($tiea, "r") or die("a virhe");
+$t=fopen($tieb, "w+") or die("t virhe");
+
+
+while(!feof($a)) // loopataan kunnes feof palauttaa TRUE
+{
+$arvosana = fgets($a); // luetaan $tiedostosta rivi kerrallaan,
+
+// arvosana korotetaan jos se ei ole 5
+if($arvosana<5 && $arvosana != "")
+{
+$korotus = $arvosana+1;
+fwrite($t, $korotus);
+fwrite($t, "\n");
+}
+
+//jos arvo on 5 ei koroteta, vaan kirjoitetaan sellaisenaan
+else if($arvosana==5)
+{
+
+fwrite($t, $arvosana);
+}
+}
+
+//indeksi siirretään tiedoston alkuun, koska indeksi tallennettaessa
+//tiedoston lopussa
+rewind($t);
+
+echo "Uudet arvosanat:\n";
+
+//tulostetaan tiedostosta arvosanat
+while(!feof($t))
+{
+$tulos = fgets($t);
+echo $tulos;
+}
+
+fclose($t);
+fclose($a);
+?>
+8.2
+<?php
+
+$ehdokas = $_GET["ehdokas"];
+$tulokset = file("tulokset.txt");
+
+foreach ($tulokset as $rivi)
+{
+    $osat = explode("|", $rivi);
+    $aani = $aani + $osat[1];
+}
+
+if ($ehdokas == 1)
+{
+   $aani++;
+}
+elseif ($ehdokas == 2)
+{
+    $aani++;
+}
+elseif ($ehdokas == 3)
+{
+    $aani++;
+}
+elseif ($ehdokas == 4)
+{
+    $aani++;
+}
+elseif ($ehdokas == 5)
+{
+    $aani++;
+}
+
+echo "Ääniä annettu yhteensä: $aani kappaletta.";
+
+?>
+8.3
+<?php
+$tiedosto = fopen ("opiskelijat.txt", "r");
+
+$opiskelija = $_GET["opiskelija"];
+
+$loytyy = false;
+while ($rivi = fgets ($tiedosto)) {
+	list ($nro, $nimi, $paikalla) = explode ("|", trim ($rivi));
+	if ($nro == $opiskelija) {
+		echo "$nimi ($nro) " . ($paikalla ? ": ilmoittautunut" : ": ei ole ilmoittautunut");
+		$loytyy = true;
+		break;
+	}
+}
+fclose ($tiedosto);
+if (!$loytyy)
+	echo "Opiskelijanumerolla ei löytynyt ketään!";
+?>
